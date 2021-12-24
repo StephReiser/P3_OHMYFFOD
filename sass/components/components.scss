@@ -12,10 +12,11 @@ button {
 }
    }
    .btn{
-    grid-row: 6;
-    padding-top:25px;
-    @media (min-width: 600px) {
-        grid-row: 4;
+    grid-row: 4;
+    padding:50px;
+        @media (min-width: 600px) {
+            padding:100px;
         grid-column: 2;
     }
   }
+  

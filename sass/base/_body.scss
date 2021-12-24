@@ -8,13 +8,21 @@ h1{
 
  
 body{
+  
     display: grid;
     grid-template-columns: 1fr;
+    max-width: 860px;
     margin: auto;
-	max-width: 1500px;
+	max-width: 1000px;
     margin: auto;
     align-items: center;
     font-family: 'Roboto', sans-serif;
     font-size:15px;
+    a {
+        text-decoration: none;
+       color: black;
+        cursor: pointer;
+        
+    }
 
 }

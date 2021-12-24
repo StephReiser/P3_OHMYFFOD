@@ -1,0 +1,116 @@
+  /*section propre aux menus*/
+  main{
+    height:auto;
+    background-color: #F2F2F2;
+        justify-items: center;
+    display: grid;
+    grid-auto-flow: column;
+        grid-template-columns: 1fr;
+        grid-template-rows:300px 30px 430px 430px 430px 100px;
+        height: auto;
+    @media (min-width: 600px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:600px 50px 500px 100px;
+    }
+    
+
+}
+
+.cardgost{
+    
+    @extend %flexcard;
+    width: 90%;
+    border-radius: 15px 15px 15px 15px;
+    
+    }
+  
+section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px 250px 250px 250px 250px 20px;
+    grid-row-gap:50px;
+    width: 100%;
+    background-color: #F2F2F2;
+    margin-top: 25px;
+    height: auto;
+    @media (min-width: 600px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:20px 250px 250px 20px;
+    } 
+   
+   h1{
+       grid-column: 1/2;
+       grid-row:1;
+       padding-left: 25px;
+     
+   }
+}
+article{
+  height: 280px;
+  width: 90%;
+  margin: 20px;
+  padding-bottom: 10px;
+  background-color: white;  
+  border-radius: 15px 15px 15px 15px;
+  h2{
+      font-size: 20px;
+  }
+       
+}
+.article__palette{
+    grid-column: 1;
+       grid-row:2;
+       @media (min-width: 600px) {
+        grid-column: 1;
+       grid-row:2;
+    } 
+      }
+.article__française{
+    grid-column: 1;
+    grid-row:3;
+    @media (min-width: 600px) {
+        grid-column: 1;
+       grid-row:3;
+}
+}
+.article__note{
+    grid-column: 1;
+    grid-row:4;
+    @media (min-width: 600px) {
+        grid-column: 2;
+       grid-row:2;
+}
+  }
+.article__delice{
+    grid-column: 1;
+    grid-row:5; 
+    @media (min-width: 600px) {
+        grid-column: 2;
+       grid-row:3;
+}
+}
+.article__restaucontainer{
+    border-radius:20px 20px 20px 20px ;
+   grid-row: 2;
+    display: flex;
+	justify-content:space-evenly;
+    align-items: center;
+   	align-items: baseline;
+    
+    height: 150px;
+    @media (min-width: 600px){
+        grid-column: 2;
+    }
+   
+ i{
+        font-size: 25px;
+        padding-left: 100px;
+     
+    }
+  h2  {
+        text-align: left;
+          
+    }
+    
+      
+}

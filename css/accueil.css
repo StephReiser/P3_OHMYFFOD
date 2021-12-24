@@ -1,11 +1,11 @@
 @charset "UTF-8";
-.cardgost, .card__menu, .card {
+.cardgost, .card__menu, nav .nav__card {
   display: flex;
   align-items: center;
   align-items: baseline;
 }
 
-.menu__choice, aside {
+.menu__choice, nav {
   display: grid;
   grid-template-columns: 1fr;
   height: auto;
@@ -27,12 +27,18 @@ h1 {
 body {
   display: grid;
   grid-template-columns: 1fr;
+  max-width: 860px;
   margin: auto;
-  max-width: 1500px;
+  max-width: 1000px;
   margin: auto;
   align-items: center;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
+}
+body a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 button {
@@ -65,6 +71,7 @@ button:hover {
   height: 180px;
   background-size: cover;
   border-radius: 15px 15px 0 0;
+  object-fit: cover;
 }
 
 /*Positionnement de l'image du menu*/
@@ -73,6 +80,7 @@ button:hover {
   background-size: cover;
   height: 300px;
   grid-row: 1;
+  object-fit: cover;
 }
 @media (min-width: 600px) {
   .img__menu {
@@ -81,109 +89,30 @@ button:hover {
   }
 }
 
-.restaurant_1 {
-  background-image: url(images/restaurant/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-}
-
-.restaurant_2 {
-  background-image: url(images/restaurant/stil-u2Lp8tXIcjw-unsplash.jpg);
-}
-
-.restaurant_3 {
-  background-image: url(images/restaurant/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-}
-
-.restaurant_4 {
-  background-image: url(images/restaurant/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-}
-
-/*Entête commune et spécifique accueil/menu*/
-header {
-  height: 100px;
-  display: flex;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  /* Icone flêche*/
-  /*Header des menus*/
-}
-header i {
-  font-size: 35px;
-  padding-right: 15px;
-  color: black;
-}
-header .menu--header {
-  grid-column: 2/5;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  height: 100px;
-}
-header p {
-  grid-column: 3/4;
-  font-family: "Shrikhand", cursive;
-  font-size: 35px;
-}
-@media (min-width: 600px) {
-  header p {
-    padding-left: 40px;
-  }
-}
-
-/*Présentation de l'entrepise*/
-.presentation {
-  padding-bottom: 20px;
-  text-align: center;
-  align-content: center;
-  background-color: #f2f2f2c7;
-}
-
-.localisation {
-  padding: 10px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  background-color: #F2F2F2;
-}
-.localisation .localisation__element {
-  grid-column: 3/4;
-  grid-row: 1;
-  display: flex;
-}
-.localisation input {
-  padding-left: 10px;
-  border: none;
-  background-color: #F2F2F2;
-}
-.localisation i {
-  padding-left: 50px;
-}
-
 /*Cartes accueil*/
-aside {
+nav {
   grid-template-rows: repeat(4, 1fr);
 }
 @media (min-width: 600px) {
-  aside {
+  nav {
     grid-auto-flow: row;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
 }
-@media (min-width: 600px) {
-  aside h1 {
-    grid-column: 1/4;
-    grid-row: 1;
-  }
-}
-
-.card {
+nav .nav__card {
   width: 90%;
   border-radius: 15px 15px 15px 15px;
 }
-.card i {
+nav .nav__card i {
   padding-left: 35px;
   padding-right: 40px;
+}
+@media (min-width: 600px) {
+  nav h1 {
+    grid-column: 1/4;
+    grid-row: 1;
+  }
 }
 
 /*Groupement de cartes menu*/
@@ -223,8 +152,61 @@ aside {
   font-size: smaller;
 }
 
-.price {
-  float: left;
+/*Entête commune et spécifique accueil/menu*/
+header {
+  height: 100px;
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* Icone flêche*/
+  /*Header des menus*/
+}
+header i {
+  font-size: 35px;
+  padding-right: 15px;
+  color: black;
+}
+header .menu--header {
+  grid-column: 2/5;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  height: 100px;
+}
+header p {
+  grid-column: 3/4;
+  font-family: "Shrikhand", cursive;
+  font-size: 35px;
+}
+
+/*Présentation de l'entrepise*/
+.presentation {
+  padding-bottom: 20px;
+  text-align: center;
+  align-content: center;
+  background-color: #f2f2f2c7;
+}
+
+.localisation {
+  padding: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  background-color: #F2F2F2;
+}
+.localisation .localisation__element {
+  grid-column: 3/4;
+  grid-row: 1;
+  display: flex;
+}
+.localisation input {
+  padding-left: 10px;
+  border: none;
+  background-color: #F2F2F2;
+}
+.localisation i {
+  padding-left: 50px;
 }
 
 /*section propre aux menus*/
@@ -328,58 +310,59 @@ article h2 {
   }
 }
 
-.restaucontainer {
+.article__restaucontainer {
   border-radius: 20px 20px 20px 20px;
   grid-row: 2;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   align-items: baseline;
-  padding-left: 15px;
-  padding-right: 20px;
   height: 150px;
 }
 @media (min-width: 600px) {
-  .restaucontainer {
+  .article__restaucontainer {
     grid-column: 2;
   }
 }
-.restaucontainer i {
+.article__restaucontainer i {
   font-size: 25px;
   padding-left: 100px;
 }
-.restaucontainer h2 {
+.article__restaucontainer h2 {
   text-align: left;
 }
 
 footer {
-  padding: 25px;
-  grid-auto-flow: column;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 40px);
   grid-row-gap: 25px;
   background-color: #444141;
   color: white;
   font-weight: bold;
+  padding-left: 25px;
 }
 @media (min-width: 600px) {
   footer {
-    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
     padding-right: 25px;
+    padding-left: 100px;
   }
 }
 footer h1 {
   grid-column: 1/2;
+  grid-row: 1;
   font-family: "Shrikhand", cursive;
   font-size: 15px;
 }
 @media (min-width: 600px) {
   footer h1 {
-    display: none;
+    font-size: 35px;
+    grid-column: 1;
   }
 }
 footer a {
@@ -391,10 +374,22 @@ footer .footer__restaurantip {
   display: flex;
   align-items: baseline;
 }
+@media (min-width: 600px) {
+  footer .footer__restaurantip {
+    grid-row: 2;
+    grid-column: 1;
+  }
+}
 footer .footer__handshelpip {
   grid-column: 1/4;
   display: flex;
   align-items: baseline;
+}
+@media (min-width: 600px) {
+  footer .footer__handshelpip {
+    grid-row: 2;
+    grid-column: 2;
+  }
 }
 footer i {
   padding-right: 10px;
@@ -402,8 +397,20 @@ footer i {
 footer .legalnotice {
   grid-column: 1/4;
 }
+@media (min-width: 600px) {
+  footer .legalnotice {
+    grid-row: 2;
+    grid-column: 3;
+  }
+}
 footer .contact {
   grid-column: 1/2;
+}
+@media (min-width: 600px) {
+  footer .contact {
+    grid-row: 2;
+    grid-column: 4;
+  }
 }
 
 /*# sourceMappingURL=accueil.css.map */

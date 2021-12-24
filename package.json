@@ -23,8 +23,10 @@
     "immutable": "^4.0.0"
   },
   "scripts": {
-   "sass":"sass --watch accueil.scss:css/accueil.css"
+   "sass":"sass --watch sass/accueil.scss:/css/accueil.css"
+    
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/StephReiser/P3_OHMYFFOD.git"

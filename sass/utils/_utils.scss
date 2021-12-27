@@ -1,0 +1,34 @@
+/*variables*/
+$color-primary:#9356DC;
+  $color-secondary:#FF79DA;
+  $color-tertiary:#99E2D0;
+
+/*map*/
+$font-size: (logo:xx-large, article:medium, title:large, body:small, menutext:small);
+
+
+/*mixin*/
+
+@mixin shadow-button {
+    box-shadow: 4px 4px 10px #444141; 
+
+  }
+  @mixin shrikhand {
+    font-family: 'Shrikhand', cursive;
+    
+}
+/*placeholders*/
+%flexcard{
+    display: flex;
+    align-items: center;
+   
+}
+%cardcolumns{
+    display:grid;
+    grid-template-columns:1fr ;
+    height: auto;
+    grid-auto-flow: column;
+     grid-row-gap: 15px;
+    align-items:flex-end;
+    justify-items: center;  
+}

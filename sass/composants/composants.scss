@@ -1,0 +1,60 @@
+button {
+    background-color: $color-primary;
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    @include shadow-button;
+   &:hover {
+    background:lighten( $color-secondary , $amount: 10);
+    cursor: pointer;
+}
+   }
+   .btn{
+    grid-row: 4;
+    padding:50px;
+        @media (min-width: 600px) {
+            padding:100px;
+        grid-column: 2;
+    }
+  }
+
+  .new{
+    color:green;
+    width: 100px;
+    height: 40px;
+    background-color:$color-tertiary ;
+    position:absolute;
+   padding: 8px; 
+   z-index: 4;
+   margin-top: 20px;
+   margin-left: 220px;
+  
+   @media (min-width: 600px) and(max-width:1023px) {
+   margin-left: 225px;  }
+   @media (min-width:1023px) {
+    margin-left: 330px;
+}
+   h2{
+       padding-left: 10px;
+       padding-top: -20px;
+   }
+   
+  }
+  .step{
+    @extend %flexcard;
+    justify-content: center;
+      background-color: $color-primary;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      padding-bottom:5px;
+      margin-left: -20px;
+      p{
+          color:white;
+         
+          
+      }
+  }
+  

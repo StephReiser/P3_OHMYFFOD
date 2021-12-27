@@ -1,12 +1,9 @@
-@import "utils/variables";
-@import "utils/mixin";
-@import "utils/placeholders";
-@import "base/body.scss";
-@import "components/components.scss";
+@import "utils/utils";
+@import "composants/composants.scss";
 @import "layouts/card.scss";
-@import "layouts/header.scss";
-@import "layouts/main.scss";
-@import "layouts/footer";
+@import "layouts/commun.scss";
+@import "layouts/base.scss";
+
 
 
   

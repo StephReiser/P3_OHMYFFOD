@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="css/accueil.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
@@ -35,31 +36,43 @@
         </button>
     </div>
     <nav>
-      
+
         <h1>Fonctionnement</h1>
         <a href="#">
-        <div class="nav__card card__decoration">
-            <i class="fas fa-mobile-alt"></i>
-            <h2>Choisissez un restaurant</h2>
-        </div>
-    </a>
-    <a href="#">
-        <div class="nav__card card__decoration">
-            <i class="fas fa-list"></i>
-            <h2>Composez votre menu</h2>
-        </div>
-    </a>
-    <a href="#">
-        <div class="nav__card card__decoration">
-            <i class="fas fa-store"></i>
-            <h2>Dégustez au restaurant</h2>
-        </div>
-    </a>
-    
+            <div class="nav__card card__decoration">
+                <div class="step">
+                    <p>1</p>
+                </div>
+                <i class="fas fa-mobile-alt"></i>
+                <h2>Choisissez un restaurant</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="nav__card card__decoration">
+                <div class="step">
+                    <p>2</p>
+                </div>
+                <i class="fas fa-list"></i>
+                <h2>Composez votre menu</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="nav__card card__decoration">
+                <div class="step">
+                    <p>3</p>
+                </div>
+                <i class="fas fa-store"></i>
+                <h2>Dégustez au restaurant</h2>
+            </div>
+        </a>
+
     </nav>
     <section>
         <h1>Restaurants</h1>
         <article class="article__palette">
+            <div class="new">
+                <h2>Nouveau</h2>
+            </div>
             <a href="lapalettedugout.html">
                 <img class="img" src="images\lapalettedugout.jpg" alt="lapalettedugoût">
 
@@ -73,9 +86,13 @@
             </a>
         </article>
         <article class="article__note">
+            <div class="new">
+                <h2>Nouveau</h2>
+            </div>
             <a href="lanoteenchantee.html">
                 <img class="img" src="images\lanotenchantee.jpg" alt="lanoteenchantée">
                 <div class="article__restaucontainer">
+
                     <div>
                         <h2>La note enchantée</h2>
                         <p>Charonne</p>
@@ -127,5 +144,4 @@
             <p><a href="mailto:stephaniereiser@gmail.com">Contact</a></p>
         </div>
     </footer>
-
 </body>

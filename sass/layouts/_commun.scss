@@ -1,0 +1,179 @@
+
+/*Principaux éléments*/
+* {
+	box-sizing: border-box;
+}
+h1{
+ 
+    font-size: map-get($font-size, title);
+}
+
+ 
+body{
+  
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+	max-width: 1000px;
+    margin: auto;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: map-get($font-size, body);
+    
+    a {
+        text-decoration: none;
+       color: black;
+        cursor: pointer;
+        
+    }
+
+}
+
+/*Entête commune et spécifique accueil/menu*/
+header{
+    height:100px;
+     display: grid;
+    grid-template-columns: repeat(5,1fr);
+ 
+
+   
+    /*Header des menus*/
+    .menu--header{
+        grid-column: 2/5;
+        display: flex;
+        align-items: baseline;
+        justify-content:center;
+        height: 100px;
+       }
+    p {
+        grid-column: 3/4;
+        @include shrikhand;
+        font-size: map-get($font-size, logo);
+       
+    }
+       /* Icone flêche*/
+    i{
+        font-size: map-get($font-size, logo);
+        padding-right: 15px;
+        color: black;
+    
+    }
+ }
+/*Présentation de l'entrepisepage d'accueil*/
+.presentation{
+    padding-bottom: 20px;
+    text-align: center;
+    align-content: center;
+    background-color: #f2f2f2c7;
+}
+.localisation {
+    padding:10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr;
+    background-color: #F2F2F2;
+    .localisation__element {
+        grid-column: 3/4;
+        grid-row: 1;
+        display: flex;
+              
+    }
+    input{
+        padding-left: 10px;
+        border: none;
+        background-color: #F2F2F2;
+    }
+    i{
+        padding-left: 50px;
+    }
+}
+
+/*Footer*/
+footer{
+    
+    display: grid;
+     grid-template-rows: repeat(5,40px);
+   grid-row-gap:25px;
+   background-color: #444141;
+   color:white;
+ 
+   padding-left: 25px;
+   @media (min-width: 600px) {
+     grid-template-columns: repeat(4,1fr);  
+ display:grid ;
+ grid-template-rows: 1fr 1fr;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: baseline;
+ padding-right: 25px;
+ padding-left: 100px;
+   }
+     
+    h1{
+       grid-column: 1/2;
+       grid-row: 1;
+        @include shrikhand;
+        font-size: map-get($font-size, body);
+        @media (min-width: 600px) {
+            font-size: map-get($font-size, logo);
+          grid-column:1;
+          font-weight: bold;
+      
+    }
+    h2{
+        font-weight: bold;
+    }
+      }
+       
+    a{
+       text-decoration: none;
+       color: white;
+      
+    }
+
+.footer__restaurantip{
+   grid-column: 1/4;
+   display: flex;
+   align-items: baseline;
+   @media (min-width: 600px) {
+     grid-row: 2;
+     grid-column: 1;
+ 
+}
+    
+  }
+ .footer__handshelpip{
+   grid-column: 1/4;
+   display: flex;
+   align-items: baseline;  
+   @media (min-width: 600px) {
+     grid-row: 2;
+     grid-column: 2;
+ 
+}
+ }
+ 
+i{
+   padding-right:10px;
+}
+.legalnotice{
+   grid-column: 1/4;
+   @media (min-width: 600px) {
+     grid-row: 2;
+     grid-column: 3;
+ 
+}
+   
+}
+.contact{
+   grid-column: 1/2;
+   @media (min-width: 600px) {
+     grid-row: 2;
+     grid-column: 4;
+ 
+}
+   
+}
+
+    }

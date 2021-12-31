@@ -95,7 +95,7 @@ footer{
     display: grid;
      grid-template-rows: repeat(5,40px);
    grid-row-gap:25px;
-   background-color: #444141;
+   background-color:$color-footer ;
    color:white;
  
    padding-left: 25px;

@@ -6,9 +6,11 @@ button {
     color: white;
     border: none;
     @include shadow-button;
+    
    &:hover {
-    background:lighten( $color-secondary , $amount: 10);
+    background:lighten( $color-primary , $amount: 5);
     cursor: pointer;
+    @include shadow-button-hover;
 }
    }
    .btn{

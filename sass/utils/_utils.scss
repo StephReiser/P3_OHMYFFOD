@@ -2,6 +2,7 @@
 $color-primary:#9356DC;
   $color-secondary:#FF79DA;
   $color-tertiary:#99E2D0;
+  $color-footer:#343638;
 
 /*map*/
 $font-size: (logo:xx-large, article:medium, title:large, body:small, menutext:small);
@@ -10,7 +11,11 @@ $font-size: (logo:xx-large, article:medium, title:large, body:small, menutext:sm
 /*mixin*/
 
 @mixin shadow-button {
-    box-shadow: 4px 4px 10px #444141; 
+    box-shadow: 4px 4px 5px #ABB0B4; 
+
+  }
+  @mixin shadow-button-hover {
+    box-shadow: 10px 10px 20px #343638; 
 
   }
   @mixin shrikhand {

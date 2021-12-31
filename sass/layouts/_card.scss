@@ -23,9 +23,9 @@ nav{
          h2{
             font-size: map-get($font-size, article);
             padding-right: 20px;
-            
+           
          }
-       
+      
      }
     h1{
         @media (min-width: 600px) {
@@ -65,8 +65,12 @@ padding-right: 15px;
 }
 }
  .card__decoration{
-    @include shadow-button;
     background-color: #F2F2F2;
+    @include shadow-button;
+    transition:400ms;
+   &:hover {
+    cursor: pointer;
+    @include shadow-button-hover;    }
     
     
  }

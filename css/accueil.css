@@ -25,11 +25,12 @@ button {
   border-radius: 20px;
   color: white;
   border: none;
-  box-shadow: 4px 4px 10px #444141;
+  box-shadow: 4px 4px 5px #ABB0B4;
 }
 button:hover {
-  background: #fface8;
+  background: #a16be0;
   cursor: pointer;
+  box-shadow: 10px 10px 20px #343638;
 }
 
 .btn {
@@ -142,8 +143,13 @@ nav .nav__card h2 {
 }
 
 .card__decoration {
-  box-shadow: 4px 4px 10px #444141;
   background-color: #F2F2F2;
+  box-shadow: 4px 4px 5px #ABB0B4;
+  transition: 400ms;
+}
+.card__decoration:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px 20px #343638;
 }
 
 .card__decoration--white {
@@ -240,7 +246,7 @@ footer {
   display: grid;
   grid-template-rows: repeat(5, 40px);
   grid-row-gap: 25px;
-  background-color: #444141;
+  background-color: #343638;
   color: white;
   padding-left: 25px;
 }

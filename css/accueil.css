@@ -164,7 +164,7 @@ nav .nav__card h2 {
 }
 .heartcontainer .heart {
   position: absolute;
-  opacity: 1;
+  opacity: 0;
   z-index: 3;
   top: 197px;
   right: 50px;

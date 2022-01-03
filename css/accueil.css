@@ -3,7 +3,7 @@
 /*map*/
 /*mixin*/
 /*placeholders*/
-.cardgost, .card__menu, .step, nav .nav__card {
+.card__menu, .cardgost, .step, nav .nav__card {
   display: flex;
   align-items: center;
 }
@@ -135,11 +135,6 @@ nav .nav__card h2 {
   border-radius: 50%;
   padding-bottom: 5px;
   margin-left: -20px;
-  transform: scale(1);
-  transition: transform 1000ms;
-}
-.step:hover {
-  transform: scale(3);
 }
 .step p {
   color: white;
@@ -250,83 +245,6 @@ nav .nav__card h2 {
   transform-origin: 100% 100%;
 }
 
-/*Cartes accueil*/
-nav {
-  grid-template-rows: repeat(4, 1fr);
-}
-@media (min-width: 1024px) {
-  nav {
-    grid-auto-flow: row;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-nav .nav__card {
-  width: 100%;
-  border-radius: 15px 15px 15px 15px;
-}
-nav .nav__card i {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-nav .nav__card h2 {
-  font-size: medium;
-  padding-right: 20px;
-}
-@media (min-width: 600px) {
-  nav h1 {
-    grid-column: 1/4;
-    grid-row: 1;
-  }
-}
-
-/*Groupement de cartes menu*/
-.menu__choice {
-  grid-template-rows: repeat(4, 1fr);
-  width: 90%;
-}
-@media (min-width: 600px) {
-  .menu__choice {
-    grid-row: 3;
-  }
-}
-@media (min-width: 1024px) {
-  .menu__choice {
-    width: auto;
-  }
-}
-
-.card__menu {
-  justify-content: space-between;
-  width: 100%;
-  border-radius: 30px 30px 30px 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 600px) {
-  .card__menu {
-    width: 100%;
-  }
-}
-
-.card__decoration {
-  background-color: #F2F2F2;
-  box-shadow: 4px 4px 5px #ABB0B4;
-  transition: 1000ms;
-}
-.card__decoration:hover {
-  cursor: pointer;
-  box-shadow: 10px 10px 20px #343638;
-}
-
-.card__decoration--white {
-  background-color: white;
-}
-
-.menu__choice--text {
-  font-size: small;
-}
-
 /*Principaux éléments*/
 * {
   box-sizing: border-box;
@@ -377,36 +295,6 @@ header i {
   font-size: xx-large;
   padding-right: 15px;
   color: black;
-}
-
-/*Présentation de l'entrepisepage d'accueil*/
-.presentation {
-  padding-bottom: 20px;
-  text-align: center;
-  align-content: center;
-  background-color: #f2f2f2c7;
-}
-
-.localisation {
-  padding: 10px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  background-color: #F2F2F2;
-}
-.localisation .localisation__element {
-  grid-column: 3/4;
-  grid-row: 1;
-  display: flex;
-}
-.localisation input {
-  padding-left: 10px;
-  border: none;
-  background-color: #F2F2F2;
-}
-.localisation i {
-  padding-left: 50px;
 }
 
 /*Footer*/
@@ -494,83 +382,67 @@ footer .contact {
   }
 }
 
-/*section propre aux menus*/
-main {
-  height: auto;
-  background-color: #F2F2F2;
-  justify-items: center;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr;
-  grid-template-rows: 430px 430px 430px 150px;
-  height: auto;
-  max-width: 1000px;
+/*Présentation de l'entreprise page d'accueil*/
+.presentation {
+  padding-bottom: 20px;
+  text-align: center;
+  align-content: center;
+  background-color: #f2f2f2c7;
 }
-@media (min-width: 600px) {
-  main {
-    grid-template-columns: repeat(3, 250px);
-    grid-template-rows: 1fr;
-  }
+
+.localisation {
+  padding: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  background-color: #F2F2F2;
+}
+.localisation .localisation__element {
+  grid-column: 3/4;
+  grid-row: 1;
+  display: flex;
+}
+.localisation input {
+  padding-left: 10px;
+  border: none;
+  background-color: #F2F2F2;
+}
+.localisation i {
+  padding-left: 50px;
+}
+
+/*Cartes accueil et navigation en étapes*/
+nav {
+  grid-template-rows: repeat(4, 1fr);
 }
 @media (min-width: 1024px) {
-  main {
+  nav {
+    grid-auto-flow: row;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }
-
-.restaucontainer {
-  height: 300px;
+nav .nav__card {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-@media (min-width: 600px) {
-  .restaucontainer {
-    background-color: #343638;
-    height: 700px;
-  }
-}
-
-.restaucontainer__title {
-  background-color: #F2F2F2;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  height: 80px;
-  margin-top: -25px;
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
-  position: absolute;
-  width: 390px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.restaucontainer__title h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: xx-large;
-}
-
-/*Positionnement de l'image du menu*/
-.img__menu {
-  width: 100%;
-  background-size: cover;
-  height: 300px;
-  object-fit: cover;
-  position: relative;
-}
-@media (min-width: 600px) {
-  .img__menu {
-    height: 600px;
-    max-width: 1000px;
-  }
-}
-
-.cardgost {
-  width: 90%;
   border-radius: 15px 15px 15px 15px;
 }
+nav .nav__card i {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+nav .nav__card h2 {
+  font-size: medium;
+  padding-right: 20px;
+}
+@media (min-width: 600px) {
+  nav h1 {
+    grid-column: 1/4;
+    grid-row: 1;
+  }
+}
 
+/*Section principale*/
 section {
   display: grid;
   grid-template-columns: 1fr;
@@ -692,6 +564,120 @@ section h1 {
 }
 .article__restaucontainer h2 {
   text-align: left;
+}
+
+/*section propre aux menus*/
+main {
+  height: auto;
+  background-color: #F2F2F2;
+  justify-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+  grid-template-rows: 430px 430px 430px 150px;
+  height: auto;
+  max-width: 1000px;
+}
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.restaucontainer {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+@media (min-width: 600px) {
+  .restaucontainer {
+    background-color: #343638;
+    height: 700px;
+  }
+}
+
+.restaucontainer__title {
+  background-color: #F2F2F2;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 80px;
+  margin-top: -25px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  position: absolute;
+  width: 390px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.restaucontainer__title h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: xx-large;
+}
+
+/*Positionnement de l'image du menu*/
+.img__menu {
+  width: 100%;
+  background-size: cover;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+}
+@media (min-width: 600px) {
+  .img__menu {
+    height: 600px;
+    max-width: 1000px;
+  }
+}
+
+.cardgost {
+  width: 90%;
+  border-radius: 15px 15px 15px 15px;
+}
+
+/*Groupement de cartes menu*/
+.menu__choice {
+  grid-template-rows: repeat(4, 1fr);
+  width: 90%;
+}
+@media (min-width: 600px) {
+  .menu__choice {
+    grid-row: 3;
+  }
+}
+@media (min-width: 1024px) {
+  .menu__choice {
+    width: auto;
+  }
+}
+
+.card__menu {
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 30px 30px 30px 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 600px) {
+  .card__menu {
+    width: 100%;
+  }
+}
+
+.card__decoration--white {
+  background-color: white;
+}
+
+.menu__choice--text {
+  font-size: small;
 }
 
 /*# sourceMappingURL=accueil.css.map */

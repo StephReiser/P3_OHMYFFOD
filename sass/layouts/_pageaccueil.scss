@@ -1,83 +1,69 @@
-  /*section propre aux menus*/
-  main{
-    height:auto;
-    background-color: #F2F2F2;
-        justify-items: center;
+/*Présentation de l'entreprise page d'accueil*/
+.presentation{
+    padding-bottom: 20px;
+    text-align: center;
+    align-content: center;
+    background-color: #f2f2f2c7;
+}
+.localisation {
+    padding:10px;
+    width: 100%;
     display: grid;
-    grid-auto-flow: column;
-        grid-template-columns: 1fr;
-        grid-template-rows:430px 430px 430px 150px;
-        height: auto;
-        max-width: 1000px;
-    @media (min-width: 600px) {
-        grid-template-columns: repeat(3,250px);
-        grid-template-rows:1fr;
-    }
-    @media (min-width: 1024px) {
-        grid-template-columns: 1fr 1fr 1fr;
-        
-    }
-    
-}
-.restaucontainer{
-    height:300px;
-    width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: flex-end;
-    @media (min-width: 600px) {
-      background-color:$color-footer  ;  
-        height: 700px;
-        }
-   
-}
-.restaucontainer__title{
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr;
     background-color: #F2F2F2;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    height: 80px;
-    margin-top: -25px;
-    border-top-left-radius: 35px;
-    border-top-right-radius:35px ;
-    position: absolute;
-    width: 390px;
-    padding-left: 15px;
-    padding-right: 15px;
+    .localisation__element {
+        grid-column: 3/4;
+        grid-row: 1;
+        display: flex;
+              
+    }
+    input{
+        padding-left: 10px;
+        border: none;
+        background-color: #F2F2F2;
+    }
+    i{
+        padding-left: 50px;
+    }
+}
+ /*Cartes accueil et navigation en étapes*/
+nav{
+    @extend %cardcolumns;
+    grid-template-rows: repeat(4,1fr) ;
+   
     
+    @media (min-width:1024px) {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .nav__card{
+        @extend %flexcard;
+        width: 100%;
+        border-radius: 15px 15px 15px 15px;
+   
+             
+         i{
+             padding-left: 20px;
+             padding-right: 20px;
+         }
+         h2{
+            font-size: map-get($font-size, article);
+            padding-right: 20px;
+           
+         }
       
-
+     }
     h1{
-        @include shrikhand;
-        font-size: map-get($font-size, logo);
- 
+        @media (min-width: 600px) {
+            grid-column: 1/4;
+            grid-row: 1;
+        } 
     }
-    }
-    
-
-/*Positionnement de l'image du menu*/
-.img__menu {
-    width: 100%;
-    background-size: cover;
-    height: 300px;
-    object-fit: cover;
-     position: relative;
-  @media (min-width: 600px) {
-       height: 600px;
-       max-width: 1000px;
-    }
-  }
-  
-
-.cardgost{
-    
-    @extend %flexcard;
-    width: 90%;
-    border-radius: 15px 15px 15px 15px;
-    
-    }
-  
-section{
+ } 
+  /*Section principale*/
+  section{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 20px 250px 250px 250px 250px 20px;

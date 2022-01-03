@@ -221,6 +221,7 @@ nav .nav__card h2 {
   left: 353px;
 }
 .heartcontainer__menu .heart__menu:hover {
+  cursor: pointer;
   opacity: 1;
 }
 .heartcontainer__menu .heart__menu::before {

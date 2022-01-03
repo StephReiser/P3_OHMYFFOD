@@ -8,7 +8,7 @@
         grid-template-columns: 1fr;
         grid-template-rows:430px 430px 430px 150px;
         height: auto;
-        width: 100%;
+        max-width: 1000px;
     @media (min-width: 600px) {
         grid-template-columns: repeat(3,250px);
         grid-template-rows:1fr;
@@ -22,29 +22,29 @@
 .restaucontainer{
     height:300px;
     width: 100%;
-   
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
     @media (min-width: 600px) {
-        
-                  height: 700px;
+      background-color:$color-footer  ;  
+        height: 700px;
         }
    
 }
 .restaucontainer__title{
     background-color: #F2F2F2;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: baseline;
     height: 80px;
     margin-top: -25px;
-    border-top-left-radius: 25px;
-    border-top-right-radius:25px ;
+    border-top-left-radius: 35px;
+    border-top-right-radius:35px ;
     position: absolute;
-    width: 100%;
-    @media (min-width: 600px) {
-     max-width: 1000px;   
-    height: 150px;
-                  
-        }
+    width: 390px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
       
 
     h1{
@@ -55,17 +55,16 @@
     }
     
 
-/*Positionnement de l'image du menu*/s
+/*Positionnement de l'image du menu*/
 .img__menu {
     width: 100%;
     background-size: cover;
     height: 300px;
     object-fit: cover;
-   
-  }
+     position: relative;
   @media (min-width: 600px) {
-    .img__menu {
-              height: 600px;
+       height: 600px;
+       max-width: 1000px;
     }
   }
   
@@ -114,14 +113,12 @@ section{
     display: flex;
        flex-direction: column;
       height: 280px;
-width: 400px;
+      width: 360px;
   margin: auto;
   padding-bottom: 10px;
   background-color: white;  
   border-radius: 15px 15px 15px 15px;
-  @media (max-width: 750px) {
-    width: 360px;
-} 
+
   h2{
     font-size: map-get($font-size, article);
  

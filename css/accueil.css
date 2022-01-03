@@ -156,6 +156,7 @@ nav .nav__card h2 {
   position: relative;
   z-index: 1;
   right: 25px;
+  font-size: 15px;
 }
 .heartcontainer i:hover {
   opacity: 0;
@@ -163,23 +164,16 @@ nav .nav__card h2 {
 }
 .heartcontainer .heart {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
+  opacity: 1;
   z-index: 3;
   top: 197px;
-  left: 350px;
+  right: 50px;
   transition: opacity 1000ms;
 }
 @media (max-width: 768px) {
   .heartcontainer .heart {
-    left: 310px;
+    left: 311px;
   }
-}
-.heartcontainer .heart .special {
-  left: 300px;
 }
 .heartcontainer .heart:hover {
   opacity: 1;
@@ -189,7 +183,7 @@ nav .nav__card h2 {
   content: "";
   width: 10px;
   height: 15px;
-  background-image: linear-gradient(to right, #FF79DA, #9356DC);
+  background-color: #9356DC;
   border-radius: 10px 10px 0 0;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
@@ -199,7 +193,57 @@ nav .nav__card h2 {
   content: "";
   width: 10px;
   height: 15px;
-  background-image: linear-gradient(to right, #FF79DA, #9356DC);
+  background-color: #9356DC;
+  border-radius: 10px 10px 0 0;
+  left: -10px;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.heartcontainer__menu {
+  width: 10x;
+  height: 15px;
+  align-items: center;
+  justify-content: center;
+  padding-right: 15px;
+}
+.heartcontainer__menu i {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+}
+.heartcontainer__menu i:hover {
+  opacity: 0;
+  color: #9356DC;
+}
+.heartcontainer__menu .heart__menu {
+  position: absolute;
+  opacity: 0;
+  z-index: 3;
+  top: 41px;
+  transition: opacity 1000ms;
+  left: 353px;
+}
+.heartcontainer__menu .heart__menu:hover {
+  opacity: 1;
+}
+.heartcontainer__menu .heart__menu::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 15px;
+  background-color: #9356DC;
+  border-radius: 10px 10px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.heartcontainer__menu .heart__menu::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 15px;
+  background-color: #9356DC;
   border-radius: 10px 10px 0 0;
   left: -10px;
   transform: rotate(45deg);
@@ -460,7 +504,7 @@ main {
   grid-template-columns: 1fr;
   grid-template-rows: 430px 430px 430px 150px;
   height: auto;
-  width: 100%;
+  max-width: 1000px;
 }
 @media (min-width: 600px) {
   main {
@@ -477,9 +521,13 @@ main {
 .restaucontainer {
   height: 300px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 @media (min-width: 600px) {
   .restaucontainer {
+    background-color: #343638;
     height: 700px;
   }
 }
@@ -487,20 +535,16 @@ main {
 .restaucontainer__title {
   background-color: #F2F2F2;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: baseline;
   height: 80px;
   margin-top: -25px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
   position: absolute;
-  width: 100%;
-}
-@media (min-width: 600px) {
-  .restaucontainer__title {
-    max-width: 1000px;
-    height: 150px;
-  }
+  width: 390px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .restaucontainer__title h1 {
   font-family: "Shrikhand", cursive;
@@ -508,18 +552,20 @@ main {
 }
 
 /*Positionnement de l'image du menu*/
-s .img__menu {
+.img__menu {
   width: 100%;
   background-size: cover;
   height: 300px;
   object-fit: cover;
+  position: relative;
 }
-
 @media (min-width: 600px) {
   .img__menu {
     height: 600px;
+    max-width: 1000px;
   }
 }
+
 .cardgost {
   width: 90%;
   border-radius: 15px 15px 15px 15px;
@@ -562,16 +608,11 @@ section h1 {
   display: flex;
   flex-direction: column;
   height: 280px;
-  width: 400px;
+  width: 360px;
   margin: auto;
   padding-bottom: 10px;
   background-color: white;
   border-radius: 15px 15px 15px 15px;
-}
-@media (max-width: 750px) {
-  .article {
-    width: 360px;
-  }
 }
 .article h2 {
   font-size: medium;

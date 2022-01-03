@@ -141,6 +141,7 @@ nav{
         position: relative;
         z-index: 1;
         right: 25px;
+        font-size: map-get($font-size, heart);
         &:hover{
             opacity: 0;
             color: $color-primary;
@@ -148,24 +149,18 @@ nav{
           }
   .heart{
     position: absolute;   
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
+    opacity: 1;
     z-index: 3;
     top: 197px;
-    left: 350px;
+   right:50px;
     transition: opacity 1000ms;
     
     
         @media (max-width: 768px) {
-        left: 310px;
+        left: 311px;
     }
 
-    .special{
-        left:300px;
-    }
+   
     &:hover {
         opacity: 1;
     }
@@ -174,7 +169,7 @@ nav{
        content:"";
        width:10px;
        height: 15px;
-       background-image:linear-gradient(to right,$color-secondary,$color-primary);
+       background-color:$color-primary;
        border-radius: 10px 10px 0 0;
        transform:rotate(-45deg);
        transform-origin: 0 100%;
@@ -184,7 +179,67 @@ nav{
     content:"";
     width:10px;
     height: 15px;
-    background-image:linear-gradient(to right,$color-secondary,$color-primary);
+    background-color:$color-primary;
+    border-radius: 10px 10px 0 0;
+    left:-10px;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  
+}
+    }
+
+}
+
+.heartcontainer__menu{
+      
+    width: 10x;
+    height: 15px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+   
+  
+    i{
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+        font-size: map-get($font-size, heart);
+        &:hover{
+            opacity:0;
+            color: $color-primary;
+        }
+          }
+  .heart__menu{
+    position: absolute;   
+    opacity: 0;
+    z-index: 3;
+    top: 41px;
+  
+    transition: opacity 1000ms;
+       
+        
+        left: 353px;
+   
+   
+    &:hover {
+        opacity: 1;
+    }
+             &::before{
+       position: absolute;
+       content:"";
+       width:10px;
+       height: 15px;
+       background-color:$color-primary;
+       border-radius: 10px 10px 0 0;
+       transform:rotate(-45deg);
+       transform-origin: 0 100%;
+            }
+   &::after{
+    position: absolute;
+    content:"";
+    width:10px;
+    height: 15px;
+    background-color:$color-primary;
     border-radius: 10px 10px 0 0;
     left:-10px;
     transform: rotate(45deg);

@@ -16,7 +16,6 @@ $font-size: (logo:xx-large, article:medium, title:large, body:small, menutext:sm
   }
   @mixin shadow-button-hover {
     box-shadow: 10px 10px 20px #343638; 
-
   }
   @mixin shrikhand {
     font-family: 'Shrikhand', cursive;

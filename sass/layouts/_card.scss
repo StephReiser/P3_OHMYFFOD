@@ -67,7 +67,7 @@ padding-right: 15px;
  .card__decoration{
     background-color: #F2F2F2;
     @include shadow-button;
-    transition:400ms;
+    transition:1000ms;
    &:hover {
     cursor: pointer;
     @include shadow-button-hover;    }

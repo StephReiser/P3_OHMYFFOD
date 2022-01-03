@@ -52,11 +52,10 @@
         font-size: map-get($font-size, logo);
  
     }
-    i{
-        font-size: map-get($font-size, logo);
     }
-}
-/*Positionnement de l'image du menu*/
+    
+
+/*Positionnement de l'image du menu*/s
 .img__menu {
     width: 100%;
     background-size: cover;
@@ -89,7 +88,7 @@ section{
     margin-top: 25px;
     height: auto;
     z-index: 1;
-    @media (min-width: 600px) {
+    @media (min-width: 769px) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows:20px 250px 250px 20px;
     } 
@@ -111,13 +110,18 @@ section{
     z-index: 3;
   }
   
-article{
-  height: 280px;
-  width: 90%;
-  margin: 20px;
+.article{
+    display: flex;
+       flex-direction: column;
+      height: 280px;
+width: 400px;
+  margin: auto;
   padding-bottom: 10px;
   background-color: white;  
   border-radius: 15px 15px 15px 15px;
+  @media (max-width: 750px) {
+    width: 360px;
+} 
   h2{
     font-size: map-get($font-size, article);
  
@@ -129,7 +133,7 @@ article{
        grid-row:2;
      position: relative;
       z-index: 2;
-       @media (min-width: 600px) {
+       @media (min-width: 769px) {
         grid-column: 1;
        grid-row:2;
     } 
@@ -140,7 +144,7 @@ article{
         grid-row:3;
         position: relative;
         z-index: 2;
-        @media (min-width: 600px) {
+        @media (min-width: 769px) {
             grid-column: 2;
            grid-row:2;
     }
@@ -148,7 +152,8 @@ article{
 .article__française{
     grid-column: 1;
     grid-row:4;
-    @media (min-width: 600px) {
+    position: relative;
+    @media (min-width: 769px) {
         grid-column: 1;
        grid-row:3;
 }
@@ -157,7 +162,8 @@ article{
 .article__delice{
     grid-column: 1;
     grid-row:5; 
-    @media (min-width: 600px) {
+    position: relative;
+    @media (min-width: 769px) {
         grid-column: 2;
        grid-row:3;
 }
@@ -166,18 +172,22 @@ article{
     border-radius:20px 20px 20px 20px ;
    grid-row: 2;
     display: flex;
-	justify-content:space-evenly;
+	justify-content:space-between;
     align-items: center;
    	align-items: baseline;
-    
     height: 150px;
+    padding-left: 15px;
+    padding-right: 15px;
     @media (min-width: 600px){
         grid-column: 2;
+    }
+    &--text{
+       margin-left: 0;
     }
    
  i{
     font-size: map-get($font-size, title);
-        padding-left: 100px;
+ 
      
     }
   h2  {

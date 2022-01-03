@@ -1,18 +1,37 @@
-button {
-    background-color: $color-primary;
+.btnstyle{
+   background-image:linear-gradient(to right,$color-secondary,$color-primary);
     width: 180px;
     height: 40px;
     border-radius: 20px;
     color: white;
     border: none;
     @include shadow-button;
-    
+   position:relative;
+  z-index: 1;
    &:hover {
-    background:lighten( $color-primary , $amount: 5);
     cursor: pointer;
-    @include shadow-button-hover;
-}
+    &::after{
+        opacity: 1;
+           }
+         
    }
+   &::after{
+       content: "";
+    cursor: pointer;   
+    background-color:lighten($color-primary, $amount: 5) ;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include shadow-button-hover;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
+    
+   }
+}
    .btn{
     grid-row: 4;
     padding:50px;
@@ -24,14 +43,14 @@ button {
 
   .new{
     color:green;
-    width: 100px;
+    width: 90px;
     height: 40px;
     background-color:$color-tertiary ;
     position:absolute;
-   padding: 8px; 
+   
    z-index: 4;
-   margin-top: 20px;
-   margin-left: 220px;
+   top: 20px;
+ right: 20px;
   
    @media (min-width: 600px) and(max-width:1023px) {
    margin-left: 225px;  }
@@ -44,6 +63,51 @@ button {
    }
    
   }
+  
+/*Cartes accueil*/
+nav{
+    @extend %cardcolumns;
+    grid-template-rows: repeat(4,1fr) ;
+   
+    
+    @media (min-width:1024px) {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .nav__card{
+        @extend %flexcard;
+        width: 100%;
+        border-radius: 15px 15px 15px 15px;
+                
+         i{
+             padding-left: 20px;
+             padding-right: 20px;
+         }
+         h2{
+            font-size: map-get($font-size, article);
+            padding-right: 20px;
+                       
+         }
+      
+     }
+    h1{
+        @media (min-width: 600px) {
+            grid-column: 1/4;
+            grid-row: 1;
+        } 
+    }
+ }
+ .card__decoration{
+    background-color: #F2F2F2;
+    @include shadow-button;
+    transition:1000ms;
+   &:hover {
+    cursor: pointer;
+    @include shadow-button-hover;    }
+ 
+    
+ }
   .step{
     @extend %flexcard;
     justify-content: center;
@@ -53,10 +117,80 @@ button {
       border-radius: 50%;
       padding-bottom:5px;
       margin-left: -20px;
+      transform:scale(1);
+      transition: transform 1000ms;
+      &:hover{
+          transform:scale(3)
+
+      }
       p{
           color:white;
-         
-          
+                  
       }
   }
+    
+   .heartcontainer{
+      
+    width: 10x;
+    height: 15px;
+    align-items: center;
+    justify-content: center;
   
+    i{
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+        right: 25px;
+        &:hover{
+            opacity: 0;
+            color: $color-primary;
+        }
+          }
+  .heart{
+    position: absolute;   
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 3;
+    top: 197px;
+    left: 350px;
+    transition: opacity 1000ms;
+    
+    
+        @media (max-width: 768px) {
+        left: 310px;
+    }
+
+    .special{
+        left:300px;
+    }
+    &:hover {
+        opacity: 1;
+    }
+             &::before{
+       position: absolute;
+       content:"";
+       width:10px;
+       height: 15px;
+       background-image:linear-gradient(to right,$color-secondary,$color-primary);
+       border-radius: 10px 10px 0 0;
+       transform:rotate(-45deg);
+       transform-origin: 0 100%;
+            }
+   &::after{
+    position: absolute;
+    content:"";
+    width:10px;
+    height: 15px;
+    background-image:linear-gradient(to right,$color-secondary,$color-primary);
+    border-radius: 10px 10px 0 0;
+    left:-10px;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  
+}
+    }
+
+}

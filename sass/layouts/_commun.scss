@@ -17,6 +17,7 @@ body{
 	max-width: 1000px;
     margin: auto;
     align-items: center;
+    justify-content: center;
     font-family: 'Roboto', sans-serif;
     font-size: map-get($font-size, body);
     

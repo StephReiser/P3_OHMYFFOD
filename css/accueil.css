@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*variables*/
-/*map*/
 /*mixin*/
+/*map*/
 /*placeholders*/
 .card__menu, .cardgost, .step, nav .nav__card {
   display: flex;
@@ -18,6 +18,7 @@
   justify-items: center;
 }
 
+/*Boutons*/
 .btnstyle {
   background-image: linear-gradient(to right, #FF79DA, #9356DC);
   width: 180px;
@@ -28,9 +29,11 @@
   box-shadow: 4px 4px 5px #ABB0B4;
   position: relative;
   z-index: 1;
+  transform: scale(1);
 }
 .btnstyle:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 .btnstyle:hover::after {
   opacity: 1;
@@ -62,6 +65,7 @@
   }
 }
 
+/*Pastille nouveauté*/
 .new {
   color: green;
   width: 90px;
@@ -121,10 +125,12 @@ nav .nav__card h2 {
   background-color: #F2F2F2;
   box-shadow: 4px 4px 5px #ABB0B4;
   transition: 1000ms;
+  transform: scale(1);
 }
 .card__decoration:hover {
   cursor: pointer;
   box-shadow: 10px 10px 20px #343638;
+  transform: scale(1.1);
 }
 
 .step {
@@ -140,6 +146,7 @@ nav .nav__card h2 {
   color: white;
 }
 
+/*Boutons coeur*/
 .heartcontainer {
   width: 10x;
   height: 15px;
@@ -178,7 +185,7 @@ nav .nav__card h2 {
   content: "";
   width: 10px;
   height: 15px;
-  background-color: #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 10px 10px 0 0;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
@@ -186,9 +193,10 @@ nav .nav__card h2 {
 .heartcontainer .heart::after {
   position: absolute;
   content: "";
-  width: 10px;
+  width: 11px;
   height: 15px;
-  background-color: #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-color: #9356DC;
   border-radius: 10px 10px 0 0;
   left: -10px;
   transform: rotate(45deg);
@@ -490,7 +498,6 @@ section h1 {
 .article h2 {
   font-size: medium;
 }
-
 .article__palette {
   grid-column: 1;
   grid-row: 2;
@@ -503,7 +510,6 @@ section h1 {
     grid-row: 2;
   }
 }
-
 .article__note {
   grid-column: 1;
   grid-row: 3;
@@ -516,7 +522,6 @@ section h1 {
     grid-row: 2;
   }
 }
-
 .article__française {
   grid-column: 1;
   grid-row: 4;
@@ -528,7 +533,6 @@ section h1 {
     grid-row: 3;
   }
 }
-
 .article__delice {
   grid-column: 1;
   grid-row: 5;
@@ -640,8 +644,8 @@ main {
 }
 
 .cardgost {
-  width: 90%;
-  border-radius: 15px 15px 15px 15px;
+  width: auto;
+  padding-right: 200px;
 }
 
 /*Groupement de cartes menu*/
@@ -649,13 +653,9 @@ main {
   grid-template-rows: repeat(4, 1fr);
   width: 90%;
 }
-@media (min-width: 600px) {
-  .menu__choice {
-    grid-row: 3;
-  }
-}
 @media (min-width: 1024px) {
   .menu__choice {
+    grid-row: 3;
     width: auto;
   }
 }

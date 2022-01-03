@@ -104,25 +104,28 @@ nav{
   padding-bottom: 10px;
   background-color: white;  
   border-radius: 15px 15px 15px 15px;
+  
+  
 
   h2{
-    font-size: map-get($font-size, article);
+    font-size: map-get($font-size, article);   }
  
-  }
+  
        
-}
-.article__palette{
+
+&__palette{
     grid-column: 1;
        grid-row:2;
      position: relative;
       z-index: 2;
+ 
        @media (min-width: 769px) {
         grid-column: 1;
        grid-row:2;
     } 
       }
 
-      .article__note{
+      &__note{
         grid-column: 1;
         grid-row:3;
         position: relative;
@@ -132,7 +135,7 @@ nav{
            grid-row:2;
     }
       }      
-.article__française{
+&__française{
     grid-column: 1;
     grid-row:4;
     position: relative;
@@ -141,8 +144,8 @@ nav{
        grid-row:3;
 }
 }
-
-.article__delice{
+  
+&__delice{
     grid-column: 1;
     grid-row:5; 
     position: relative;
@@ -151,6 +154,7 @@ nav{
        grid-row:3;
 }
 }
+  }
 .article__restaucontainer{
     border-radius:20px 20px 20px 20px ;
    grid-row: 2;
@@ -178,5 +182,5 @@ nav{
           
     }
     
-      
-}
+    }     
+

@@ -1,3 +1,5 @@
+
+/*Boutons*/
 .btnstyle{
    background-image:linear-gradient(to right,$color-secondary,$color-primary);
     width: 180px;
@@ -8,15 +10,19 @@
     @include shadow-button;
    position:relative;
   z-index: 1;
+  transform:scale(1);
+ 
    &:hover {
     cursor: pointer;
+    transform: scale(1.1);
     &::after{
         opacity: 1;
+       
            }
-         
+ 
    }
    &::after{
-       content: "";
+    content: "";
     cursor: pointer;   
     background-color:lighten($color-primary, $amount: 5) ;
     border-radius: 20px;
@@ -40,7 +46,7 @@
         grid-column: 2;
     }
   }
-
+/*Pastille nouveauté*/
   .new{
     color:green;
     width: 90px;
@@ -102,9 +108,12 @@ nav{
     background-color: #F2F2F2;
     @include shadow-button;
     transition:1000ms;
+    transform: scale(1);
    &:hover {
     cursor: pointer;
-    @include shadow-button-hover;    }
+    @include shadow-button-hover;
+    transform: scale(1.1)
+    }
  
     
  }
@@ -126,7 +135,7 @@ nav{
                   
       }
   }
-    
+/*Boutons coeur*/
    .heartcontainer{
       
     width: 10x;
@@ -165,7 +174,7 @@ nav{
        content:"";
        width:10px;
        height: 15px;
-       background-color:$color-primary;
+       background:linear-gradient($color-secondary,$color-primary);
        border-radius: 10px 10px 0 0;
        transform:rotate(-45deg);
        transform-origin: 0 100%;
@@ -173,9 +182,10 @@ nav{
    &::after{
     position: absolute;
     content:"";
-    width:10px;
+    width:11px;
     height: 15px;
-    background-color:$color-primary;
+    background:linear-gradient($color-secondary,$color-primary);
+    border-color:$color-primary ;
     border-radius: 10px 10px 0 0;
     left:-10px;
     transform: rotate(45deg);

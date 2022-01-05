@@ -1,5 +1,3 @@
-
-
 /*map*/
 $font-size: (logo:xx-large, article:medium, title:large, body:small, menutext:small,heart:15px);
 
@@ -20,3 +18,11 @@ $font-size: (logo:xx-large, article:medium, title:large, body:small, menutext:sm
     align-items:flex-end;
     justify-items: center;  
 }
+
+/*Condition */
+
+@if( lightness($color-footer) < 22% ){$color-text:#ffffff;}
+
+
+    
+

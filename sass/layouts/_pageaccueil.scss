@@ -56,7 +56,7 @@ nav{
       
      }
     h1{
-        @media (min-width: 600px) {
+        @media (min-width: 764px) {
             grid-column: 1/4;
             grid-row: 1;
         } 
@@ -165,7 +165,7 @@ nav{
     height: 150px;
     padding-left: 15px;
     padding-right: 15px;
-    @media (min-width: 600px){
+    @media (min-width: 764px){
         grid-column: 2;
     }
     &--text{

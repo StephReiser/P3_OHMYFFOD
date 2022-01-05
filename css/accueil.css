@@ -3,7 +3,7 @@
 /*mixin*/
 /*map*/
 /*placeholders*/
-.card__menu, .cardgost, .step, nav .nav__card {
+.check__animation, .card__menu, .cardgost, .step, nav .nav__card {
   display: flex;
   align-items: center;
 }
@@ -18,9 +18,10 @@
   justify-items: center;
 }
 
+/*Condition */
 /*Boutons*/
 .btnstyle {
-  background-image: linear-gradient(to right, #FF79DA, #9356DC);
+  background-image: linear-gradient(to right, #ff7ad9, #9256dc);
   width: 180px;
   height: 40px;
   border-radius: 20px;
@@ -41,7 +42,7 @@
 .btnstyle::after {
   content: "";
   cursor: pointer;
-  background-color: #a16be0;
+  background-color: #a06be1;
   border-radius: 20px;
   position: absolute;
   top: 0;
@@ -51,14 +52,20 @@
   box-shadow: 10px 10px 20px #343638;
   opacity: 0;
   z-index: -1;
-  transition: opacity 250ms;
+  transition: opacity 250ms, scale 50ms 150ms;
 }
 
 .btn {
   grid-row: 4;
   padding: 50px;
 }
-@media (min-width: 600px) {
+.btn__menu {
+  align-items: center;
+  padding: 20px;
+  padding-left: 70px;
+  display: flex;
+}
+@media (min-width: 764px) {
   .btn {
     padding: 100px;
     grid-column: 2;
@@ -70,18 +77,18 @@
   color: green;
   width: 90px;
   height: 40px;
-  background-color: #99E2D0;
+  background-color: #98e2cf;
   position: absolute;
   z-index: 4;
   top: 20px;
   right: 20px;
 }
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 764px) and (max-width: 991px) {
   .new {
     margin-left: 225px;
   }
 }
-@media (min-width: 1023px) {
+@media (min-width: 992px) {
   .new {
     margin-left: 330px;
   }
@@ -105,6 +112,8 @@ nav {
 nav .nav__card {
   width: 100%;
   border-radius: 15px 15px 15px 15px;
+  position: relative;
+  z-index: 1;
 }
 nav .nav__card i {
   padding-left: 20px;
@@ -114,7 +123,7 @@ nav .nav__card h2 {
   font-size: medium;
   padding-right: 20px;
 }
-@media (min-width: 600px) {
+@media (min-width: 764px) {
   nav h1 {
     grid-column: 1/4;
     grid-row: 1;
@@ -124,7 +133,7 @@ nav .nav__card h2 {
 .card__decoration {
   background-color: #F2F2F2;
   box-shadow: 4px 4px 5px #ABB0B4;
-  transition: 1000ms;
+  transition: box-shadow 250ms, scale 50ms 200ms;
   transform: scale(1);
 }
 .card__decoration:hover {
@@ -135,12 +144,15 @@ nav .nav__card h2 {
 
 .step {
   justify-content: center;
-  background-color: #9356DC;
+  background-color: #9256dc;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   padding-bottom: 5px;
   margin-left: -20px;
+  transition: margin-left 500ms;
+  position: absolute;
+  z-index: 3;
 }
 .step p {
   color: white;
@@ -153,6 +165,9 @@ nav .nav__card h2 {
   align-items: center;
   justify-content: center;
 }
+.heartcontainer input {
+  opacity: 0;
+}
 .heartcontainer i {
   opacity: 1;
   position: relative;
@@ -162,7 +177,7 @@ nav .nav__card h2 {
 }
 .heartcontainer i:hover {
   opacity: 0;
-  color: #9356DC;
+  color: #9256dc;
 }
 .heartcontainer .heart {
   position: absolute;
@@ -185,7 +200,7 @@ nav .nav__card h2 {
   content: "";
   width: 10px;
   height: 15px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff7ad9, #9256dc);
   border-radius: 10px 10px 0 0;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
@@ -195,8 +210,8 @@ nav .nav__card h2 {
   content: "";
   width: 11px;
   height: 15px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border-color: #9356DC;
+  background: linear-gradient(#ff7ad9, #9256dc);
+  border-color: #9256dc;
   border-radius: 10px 10px 0 0;
   left: -10px;
   transform: rotate(45deg);
@@ -218,7 +233,7 @@ nav .nav__card h2 {
 }
 .heartcontainer__menu i:hover {
   opacity: 0;
-  color: #9356DC;
+  color: #9256dc;
 }
 .heartcontainer__menu .heart__menu {
   position: absolute;
@@ -237,7 +252,7 @@ nav .nav__card h2 {
   content: "";
   width: 10px;
   height: 15px;
-  background-color: #9356DC;
+  background-color: #9256dc;
   border-radius: 10px 10px 0 0;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
@@ -247,7 +262,7 @@ nav .nav__card h2 {
   content: "";
   width: 10px;
   height: 15px;
-  background-color: #9356DC;
+  background-color: #9256dc;
   border-radius: 10px 10px 0 0;
   left: -10px;
   transform: rotate(45deg);
@@ -311,8 +326,8 @@ footer {
   display: grid;
   grid-template-rows: repeat(5, 40px);
   grid-row-gap: 25px;
-  background-color: #343638;
-  color: white;
+  background-color: #333638;
+  color: #ffffff;
   padding-left: 25px;
 }
 @media (min-width: 600px) {
@@ -444,7 +459,7 @@ nav .nav__card h2 {
   font-size: medium;
   padding-right: 20px;
 }
-@media (min-width: 600px) {
+@media (min-width: 764px) {
   nav h1 {
     grid-column: 1/4;
     grid-row: 1;
@@ -556,7 +571,7 @@ section h1 {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (min-width: 600px) {
+@media (min-width: 764px) {
   .article__restaucontainer {
     grid-column: 2;
   }
@@ -579,19 +594,25 @@ main {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 1fr;
-  grid-template-rows: 430px 430px 430px 150px;
+  grid-template-rows: 350px 350px 350px 100px;
   height: auto;
-  max-width: 1000px;
+  max-width: 1050px;
 }
-@media (min-width: 600px) {
+@media (max-width: 991px) {
   main {
-    grid-template-columns: repeat(3, 250px);
+    justify-items: start;
+  }
+}
+@media (min-width: 764px) and (max-width: 991px) {
+  main {
+    grid-template-columns: 200px 350px 200px;
     grid-template-rows: 1fr;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   main {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 }
 
@@ -602,10 +623,12 @@ main {
   justify-content: center;
   align-items: flex-end;
 }
-@media (min-width: 600px) {
+@media (min-width: 764px) {
   .restaucontainer {
-    background-color: #343638;
+    background-color: #333638;
     height: 700px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
   }
 }
 
@@ -636,16 +659,21 @@ main {
   object-fit: cover;
   position: relative;
 }
-@media (min-width: 600px) {
+@media (min-width: 764px) {
   .img__menu {
     height: 600px;
     max-width: 1000px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
   }
 }
 
 .cardgost {
   width: auto;
-  padding-right: 200px;
+  height: 20px;
+  margin-right: 250px;
+  border-bottom: 3px solid #98e2cf;
+  border-inline-start-width: 15px;
 }
 
 /*Groupement de cartes menu*/
@@ -653,7 +681,13 @@ main {
   grid-template-rows: repeat(4, 1fr);
   width: 90%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 764px) and (max-width: 991px) {
+  .menu__choice {
+    grid-column: 2;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
   .menu__choice {
     grid-row: 3;
     width: auto;
@@ -662,15 +696,14 @@ main {
 
 .card__menu {
   justify-content: space-between;
-  width: 100%;
+  align-items: flex-end;
+  width: 320px;
   border-radius: 30px 30px 30px 30px;
   padding-left: 15px;
   padding-right: 15px;
-}
-@media (min-width: 600px) {
-  .card__menu {
-    width: 100%;
-  }
+  z-index: 3;
+  position: relative;
+  /*réfléchir à un mixin avec last-child*/
 }
 
 .card__decoration--white {
@@ -678,7 +711,76 @@ main {
 }
 
 .menu__choice--text {
+  text-overflow: ellipsis;
+}
+.menu__choice--text p {
   font-size: small;
+}
+.menu__choice--text h2 {
+  font-size: medium;
+}
+.menu__choice--text:hover + .check {
+  transform: scaleX(1);
+}
+.menu__choice--text:hover + .check > .check__animation {
+  transform: rotate(0deg);
+}
+
+.check {
+  display: flex;
+  background-color: #98e2cf;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: absolute;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  float: right;
+  height: 100%;
+  left: 240px;
+  width: 80px;
+  transform: scaleX(0);
+  transition: transform 500ms;
+  transform-origin: right;
+}
+
+.check__animation {
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background-color: white;
+  position: absolute;
+  z-index: 3;
+  justify-content: center;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  overflow: hidden;
+}
+.check__animation i {
+  color: #98e2cf;
+  z-index: 4;
+}
+
+/*DIV utilisées quand intégration du prix au bouton*/
+.price {
+  height: 100%;
+  width: 50px;
+  left: 260px;
+  top: 20px;
+  z-index: 2;
+  position: absolute;
+  transition: transform 500ms ease-in-out;
+}
+
+.btn__check {
+  height: 100%;
+  left: 240px;
+  z-index: 2;
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 500ms;
+  transform-origin: 0%;
 }
 
 /*# sourceMappingURL=accueil.css.map */

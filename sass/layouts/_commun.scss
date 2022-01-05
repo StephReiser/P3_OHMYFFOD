@@ -69,9 +69,8 @@ footer{
      grid-template-rows: repeat(5,40px);
    grid-row-gap:25px;
    background-color:$color-footer ;
-   color:white;
- 
-   padding-left: 25px;
+   @include color;
+    padding-left: 25px;
    @media (min-width: 600px) {
      grid-template-columns: repeat(4,1fr);  
  display:grid ;

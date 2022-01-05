@@ -11,3 +11,6 @@
     font-family: 'Shrikhand', cursive;
     
 }
+@mixin color{
+  color:$color-text;
+}

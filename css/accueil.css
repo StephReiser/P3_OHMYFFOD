@@ -19,6 +19,29 @@
 }
 
 /*Condition */
+/*Keyframes*/
+@keyframes menu {
+  0% {
+    transform: translateY(35px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.first {
+  animation: menu 1000ms 50ms backwards;
+}
+
+.second {
+  animation: menu 1000ms 500ms backwards;
+}
+
+.third {
+  animation: menu 1000ms 1000ms backwards;
+}
+
 /*Boutons*/
 .btnstyle {
   background-image: linear-gradient(to right, #ff7ad9, #9256dc);

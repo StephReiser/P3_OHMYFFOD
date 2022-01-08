@@ -23,6 +23,36 @@ $font-size: (logo:xx-large, article:medium, title:large, body:small, menutext:sm
 
 @if( lightness($color-footer) < 22% ){$color-text:#ffffff;}
 
+/*Keyframes*/
+
+$menu-dur:1000ms;
+$menu-first-delay:50ms;
+$menu-second-delay:500ms;
+$menu-third-delay:1000ms;
+@keyframes menu{
+    0%{
+        transform:translateY(+35px);
+        opacity: 0;
+    }
+
+     100%{
+        transform:translateY(0);
+        opacity: 1;
+    }
+}
+.first{
+    animation: menu $menu-dur $menu-first-delay backwards;
+    
+}
+.second{
+    animation: menu $menu-dur $menu-second-delay  backwards;
+    
+}
+.third
+{
+    animation: menu $menu-dur $menu-third-delay  backwards;
+ 
+}
 
     
 

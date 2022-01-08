@@ -3,7 +3,7 @@
 /*mixin*/
 /*map*/
 /*placeholders*/
-.check__animation, .card__menu, .cardgost, .step, nav .nav__card {
+.check__animation, .card__menu, .cardgost, nav .nav__card, .step, nav__card {
   display: flex;
   align-items: center;
 }
@@ -109,17 +109,17 @@ nav {
     grid-template-rows: 1fr 1fr;
   }
 }
-nav .nav__card {
+nav__card {
   width: 100%;
   border-radius: 15px 15px 15px 15px;
   position: relative;
   z-index: 1;
 }
-nav .nav__card i {
+nav__card i {
   padding-left: 20px;
   padding-right: 20px;
 }
-nav .nav__card h2 {
+nav__card h2 {
   font-size: medium;
   padding-right: 20px;
 }
@@ -130,13 +130,13 @@ nav .nav__card h2 {
   }
 }
 
-.card__decoration {
+.card__decoration--accueil {
   background-color: #F2F2F2;
   box-shadow: 4px 4px 5px #ABB0B4;
   transition: box-shadow 250ms, scale 50ms 200ms;
   transform: scale(1);
 }
-.card__decoration:hover {
+.card__decoration--accueil:hover {
   cursor: pointer;
   box-shadow: 10px 10px 20px #343638;
   transform: scale(1.1);
@@ -267,6 +267,17 @@ nav .nav__card h2 {
   left: -10px;
   transform: rotate(45deg);
   transform-origin: 100% 100%;
+}
+
+/*Animation bouton menu*/
+.menu__choice--text:hover > .menu__choice--price {
+  transform: translateX(-65px);
+}
+.menu__choice--text:hover + .check {
+  transform: scaleX(1);
+}
+.menu__choice--text:hover + .check > .check__animation {
+  transform: rotate(0deg);
 }
 
 /*Principaux éléments*/
@@ -668,6 +679,7 @@ main {
   }
 }
 
+/*Groupement de cartes menu*/
 .cardgost {
   width: auto;
   height: 20px;
@@ -676,7 +688,6 @@ main {
   border-inline-start-width: 15px;
 }
 
-/*Groupement de cartes menu*/
 .menu__choice {
   grid-template-rows: repeat(4, 1fr);
   width: 90%;
@@ -693,6 +704,33 @@ main {
     width: auto;
   }
 }
+.menu__choice--price {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  width: 35px;
+  left: 260px;
+  top: 0;
+  position: absolute;
+  transition: transform 500ms ease-in-out;
+}
+.menu__choice--text {
+  display: flex;
+  flex-direction: column;
+}
+.menu__choice--text p {
+  font-size: small;
+}
+.menu__choice--text h2 {
+  font-size: medium;
+}
+.menu__choice--text .textonly p h2 {
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 230px;
+}
 
 .card__menu {
   justify-content: space-between;
@@ -703,27 +741,16 @@ main {
   padding-right: 15px;
   z-index: 3;
   position: relative;
-  /*réfléchir à un mixin avec last-child*/
 }
 
-.card__decoration--white {
+.card__decoration--menu {
   background-color: white;
+  box-shadow: 4px 4px 5px #ABB0B4;
+  transition: box-shadow 250ms, scale 50ms 200ms;
 }
-
-.menu__choice--text {
-  text-overflow: ellipsis;
-}
-.menu__choice--text p {
-  font-size: small;
-}
-.menu__choice--text h2 {
-  font-size: medium;
-}
-.menu__choice--text:hover + .check {
-  transform: scaleX(1);
-}
-.menu__choice--text:hover + .check > .check__animation {
-  transform: rotate(0deg);
+.card__decoration--menu:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px 20px #343638;
 }
 
 .check {
@@ -760,27 +787,6 @@ main {
 .check__animation i {
   color: #98e2cf;
   z-index: 4;
-}
-
-/*DIV utilisées quand intégration du prix au bouton*/
-.price {
-  height: 100%;
-  width: 50px;
-  left: 260px;
-  top: 20px;
-  z-index: 2;
-  position: absolute;
-  transition: transform 500ms ease-in-out;
-}
-
-.btn__check {
-  height: 100%;
-  left: 240px;
-  z-index: 2;
-  position: absolute;
-  transform: scaleX(0);
-  transition: transform 500ms;
-  transform-origin: 0%;
 }
 
 /*# sourceMappingURL=accueil.css.map */

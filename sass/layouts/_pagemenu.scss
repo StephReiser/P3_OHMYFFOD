@@ -38,8 +38,7 @@ main{
         border-top-left-radius: 35px;
         border-top-right-radius:35px ;
         }
-   
-}
+   }
 .restaucontainer__title{
     background-color: #F2F2F2;
     display: flex;
@@ -53,14 +52,13 @@ main{
     width: 390px;
     padding-left: 15px;
     padding-right: 15px;
-         
+       
     h1{
         @include shrikhand;
         font-size: map-get($font-size, logo);
- 
+     }
     }
-    }
-   
+  
 
 /*Positionnement de l'image du menu*/
 .img__menu {
@@ -76,21 +74,19 @@ main{
        border-top-right-radius:35px ;
     }
   }
-  .cardgost{
-    
-    @extend %flexcard;
-    width: auto;
-    height: 20px;
-    margin-right: 250px;
-    border-bottom:3px solid $color-tertiary;
-    border-inline-start-width: 15px;
-    
   
 
-    
-    }
-
     /*Groupement de cartes menu*/
+    .cardgost{
+    
+        @extend %flexcard;
+        width: auto;
+        height: 20px;
+        margin-right: 250px;
+        border-bottom:3px solid $color-tertiary;
+        border-inline-start-width: 15px;
+            
+        }  
 .menu__choice{
     @extend %cardcolumns;
     grid-template-rows: repeat(4,1fr) ;  
@@ -104,9 +100,44 @@ main{
         grid-row: 3;
         width: auto;
     } 
+
+   
+&--price{
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    width: 35px;
+    left:260px;
+    top: 0;
+    position: absolute;
+    transition: transform 500ms ease-in-out;
+     
+    
+} 
+&--text{
+    display: flex;
+    flex-direction: column;
+     
+    
+  p {
+     font-size: map-get($font-size, menutext);
+ 
+    }
+    h2{
+     font-size: map-get($font-size, article);  
+    }
+   .textonly p h2{
+   white-space: nowrap;
+      display: block;
+     overflow: hidden;
+     text-overflow: ellipsis; 
+     width: 230px;
+    }
+    
+            
+ }
 }
   
-
 
  .card__menu{
     justify-content: space-between;
@@ -118,36 +149,25 @@ padding-left: 15px;
 padding-right: 15px;
 z-index: 3;
 position: relative;
-/*réfléchir à un mixin avec last-child*/
 
 
-}
-
- .card__decoration--white{
-    
+   }
+ .card__decoration--menu{
     background-color: white;
+    @include shadow-button;
+    transition: box-shadow 250ms, scale 50ms 200ms;
+   
+
+   &:hover {
+    cursor: pointer;
+    @include shadow-button-hover;
+         
+    }  
+    
     
  }
-.menu__choice--text{
-    text-overflow: ellipsis;
- p {
-    font-size: map-get($font-size, menutext);
 
 
-   }
-   h2{
-    font-size: map-get($font-size, article);  
-   }
-    &:hover + .check{
-transform:scaleX(1);
-
-        & > .check__animation{
-            transform: rotate(0deg);
-        }
-        
-    }
-}
-  
 .check{
     display: flex;
     background-color: $color-tertiary;
@@ -165,6 +185,7 @@ transform:scaleX(1);
     transform:scaleX(0);
     transition: transform 500ms;
     transform-origin:right ;
+   
     
    
 }
@@ -185,24 +206,5 @@ transform:scaleX(1);
         z-index:4;
     }
 }
-/*DIV utilisées quand intégration du prix au bouton*/
-.price{
-    height: 100%;
-    width: 50px;
-    left:260px;
-    top: 20px;
-    z-index: 2;
-    position: absolute;
-    transition: transform 500ms ease-in-out;
-    
-}
-.btn__check{
- 
-    height:100%;
-  left: 240px;
-   z-index: 2;
-    position: absolute;
-    transform:scaleX(0);
-    transition: transform 500ms;
-    transform-origin:0%;
-}
+
+   

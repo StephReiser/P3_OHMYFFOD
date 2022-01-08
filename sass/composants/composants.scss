@@ -35,7 +35,7 @@
     opacity: 0;
     z-index: -1;
     transition: opacity 250ms, scale 50ms 150ms;
-    
+   
    }
 }
    .btn{
@@ -88,7 +88,7 @@ nav{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
-    .nav__card{
+    &__card{
         @extend %flexcard;
         width: 100%;
         border-radius: 15px 15px 15px 15px;
@@ -113,7 +113,7 @@ nav{
         } 
     }
  }
- .card__decoration{
+ .card__decoration--accueil{
     background-color: #F2F2F2;
     @include shadow-button;
     transition: box-shadow 250ms, scale 50ms 200ms;
@@ -265,4 +265,17 @@ nav{
 }
     }
 
+}
+/*Animation bouton menu*/
+.menu__choice--text{
+    &:hover > .menu__choice--price{
+        transform:translateX(-65px);
+            }
+            &:hover + .check{
+                transform:scaleX(1);
+                
+                        & > .check__animation{
+                            transform: rotate(0deg);
+                        }
+                            }
 }

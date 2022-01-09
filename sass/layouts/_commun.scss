@@ -1,16 +1,11 @@
-
 /*Principaux éléments*/
 * {
 	box-sizing: border-box;
 }
 h1{
- 
-    font-size: map-get($font-size, title);
+     font-size: map-get($font-size, title);
 }
-
- 
 body{
-  
     display: grid;
     grid-template-columns: 1fr;
     margin: auto;
@@ -20,25 +15,19 @@ body{
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     font-size: map-get($font-size, body);
-    
-    a {
+       a {
         text-decoration: none;
        color: black;
         cursor: pointer;
-        
+     
     }
-
 }
-
 /*Entête commune et spécifique accueil/menu*/
 header{
     height:100px;
      display: grid;
     grid-template-columns: repeat(5,1fr);
- 
-
-   
-    /*Header des menus*/
+      /*Header des menus*/
     .menu--header{
         grid-column: 2/5;
         display: flex;
@@ -50,18 +39,15 @@ header{
         grid-column: 3/4;
         @include shrikhand;
         font-size: map-get($font-size, logo);
-       
+   
     }
        /* Icone flêche*/
     i{
         font-size: map-get($font-size, logo);
         padding-right: 15px;
         color: black;
-    
-    }
+        }
  }
-
-
 /*Footer*/
 footer{
     
@@ -91,7 +77,7 @@ footer{
             font-size: map-get($font-size, logo);
           grid-column:1;
           font-weight: bold;
-      
+     
     }
     h2{
         font-weight: bold;
@@ -103,7 +89,6 @@ footer{
        color: white;
       
     }
-
 .footer__restaurantip{
    grid-column: 1/4;
    display: flex;
@@ -113,7 +98,7 @@ footer{
      grid-column: 1;
  
 }
-    
+   
   }
  .footer__handshelpip{
    grid-column: 1/4;

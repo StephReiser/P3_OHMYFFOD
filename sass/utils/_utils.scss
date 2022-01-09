@@ -24,7 +24,7 @@ $font-size: (logo:xx-large, article:medium, title:large, body:small, menutext:sm
 @if( lightness($color-footer) < 22% ){$color-text:#ffffff;}
 
 /*Keyframes*/
-
+/*Apparition pagesmenu*/
 $menu-dur:1000ms;
 $menu-first-delay:50ms;
 $menu-second-delay:500ms;
@@ -53,6 +53,38 @@ $menu-third-delay:1000ms;
     animation: menu $menu-dur $menu-third-delay  backwards;
  
 }
+/*loading spinner page d'accueil*/
 
+$step-dur:300ms;
+$step-one-delay:50ms;
+$step-two-delay:200ms;
+$step-three-delay:150ms;
+$step-trans-delay:2400ms;
+/*Si mise en place migration des step à leur place*/
+$step-trans-dur:600ms;
+$step-one-translate:-110px -385px;
+    @keyframes step{
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(2.5);
+        }    
+        
+        100%{
+            transform:scale(0)
+        }
+    }
     
 
+.stepone{
+animation:step $step-dur $step-one-delay backwards;
+}
+.steptwo{
+    animation:step $step-dur $step-two-delay backwards;
+ 
+}
+.stepthree{
+    animation:step $step-dur $step-three-delay backwards;
+ 
+}

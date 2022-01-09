@@ -20,6 +20,7 @@
 
 /*Condition */
 /*Keyframes*/
+/*Apparition pagesmenu*/
 @keyframes menu {
   0% {
     transform: translateY(35px);
@@ -40,6 +41,31 @@
 
 .third {
   animation: menu 1000ms 1000ms backwards;
+}
+
+/*loading spinner page d'accueil*/
+/*Si mise en place migration des step à leur place*/
+@keyframes step {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(2.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.stepone {
+  animation: step 300ms 50ms backwards;
+}
+
+.steptwo {
+  animation: step 300ms 200ms backwards;
+}
+
+.stepthree {
+  animation: step 300ms 150ms backwards;
 }
 
 /*Boutons*/
@@ -208,7 +234,7 @@ nav__card h2 {
   z-index: 3;
   top: 197px;
   right: 50px;
-  transition: opacity 1000ms;
+  transition: opacity 250ms;
 }
 @media (max-width: 768px) {
   .heartcontainer .heart {
@@ -301,6 +327,34 @@ nav__card h2 {
 }
 .menu__choice--text:hover + .check > .check__animation {
   transform: rotate(0deg);
+}
+
+/*loading spinner*/
+.loadingspinner {
+  height: 2px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 1;
+  position: relative;
+}
+
+.load {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9256dc;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 4;
+  position: relative;
+  top: 200px;
+  transform: scale(2.5);
+}
+.load p {
+  font-family: "Shrikhand", cursive;
 }
 
 /*Principaux éléments*/
@@ -673,6 +727,7 @@ main {
   align-items: baseline;
   height: 80px;
   margin-top: -25px;
+  margin-bottom: -20px;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   position: absolute;

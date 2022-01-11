@@ -48,24 +48,35 @@
 @keyframes step {
   0% {
     transform: scale(0);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1.5);
+    opacity: 1;
   }
   50% {
-    transform: scale(2.5);
+    transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.5);
+    opacity: 0.5;
   }
   100% {
     transform: scale(0);
+    opacity: 0;
   }
 }
 .stepone {
-  animation: step 300ms 50ms backwards;
+  animation: step 1000ms 50ms 5;
 }
 
 .steptwo {
-  animation: step 300ms 200ms backwards;
+  animation: step 1000ms 200ms 5;
 }
 
 .stepthree {
-  animation: step 300ms 150ms backwards;
+  animation: step 1000ms 150ms 5;
 }
 
 /*Boutons*/
@@ -111,12 +122,11 @@
 .btn__menu {
   align-items: center;
   padding: 20px;
-  padding-left: 70px;
+  align-content: stretch;
   display: flex;
 }
 @media (min-width: 764px) {
   .btn {
-    padding: 100px;
     grid-column: 2;
   }
 }
@@ -335,7 +345,7 @@ nav__card h2 {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   opacity: 1;
   position: relative;
 }
@@ -344,17 +354,18 @@ nav__card h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #9256dc;
+  background-color: #333638;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   z-index: 4;
   position: relative;
   top: 200px;
-  transform: scale(2.5);
+  transform: scale(1.5);
 }
 .load p {
   font-family: "Shrikhand", cursive;
+  color: white;
 }
 
 /*Principaux éléments*/
@@ -681,15 +692,9 @@ main {
   justify-items: center;
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 1fr;
   grid-template-rows: 350px 350px 350px 100px;
   height: auto;
   max-width: 1050px;
-}
-@media (max-width: 991px) {
-  main {
-    justify-items: start;
-  }
 }
 @media (min-width: 764px) and (max-width: 991px) {
   main {
@@ -726,7 +731,6 @@ main {
   justify-content: space-between;
   align-items: baseline;
   height: 80px;
-  margin-top: -25px;
   margin-bottom: -20px;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;

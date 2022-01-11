@@ -55,7 +55,7 @@ $menu-third-delay:1000ms;
 }
 /*loading spinner page d'accueil*/
 
-$step-dur:300ms;
+$step-dur:1000ms;
 $step-one-delay:50ms;
 $step-two-delay:200ms;
 $step-three-delay:150ms;
@@ -66,25 +66,36 @@ $step-one-translate:-110px -385px;
     @keyframes step{
         0% {
             transform: scale(0);
+            opacity: 0;
         }
-        50% {
-            transform: scale(2.5);
+        30% {
+            transform: scale(1.5);
+            opacity: 1;
         }    
+        50%{
+            transform: scale(1);
+            opacity: 1;
+        }
+        70%{
+            transform: scale(0.5); 
+            opacity: 0.5;
+        }
         
         100%{
-            transform:scale(0)
+            transform:scale(0);
+            opacity:0;
         }
     }
     
 
 .stepone{
-animation:step $step-dur $step-one-delay backwards;
+animation:step $step-dur $step-one-delay 5;
 }
 .steptwo{
-    animation:step $step-dur $step-two-delay backwards;
+    animation:step $step-dur $step-two-delay 5;
  
 }
 .stepthree{
-    animation:step $step-dur $step-three-delay backwards;
+    animation:step $step-dur $step-three-delay 5;
  
 }

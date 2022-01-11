@@ -7,13 +7,11 @@ main{
     justify-items: center;
     display: grid;
     grid-auto-flow: column;
-        grid-template-columns: 1fr;
+       
         grid-template-rows:350px 350px 350px 100px;
         height: auto;
         max-width: 1050px;
-        @media(max-width:991px){
-            justify-items: start;
-        }
+        
     @media (min-width: 764px) and(max-width:991px) {
         grid-template-columns:200px 350px 200px;
         grid-template-rows:1fr;
@@ -45,7 +43,7 @@ main{
     justify-content: space-between;
     align-items: baseline;
     height: 80px;
-    margin-top: -25px;
+    
     margin-bottom: -20px;
     border-top-left-radius: 35px;
     border-top-right-radius:35px ;

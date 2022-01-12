@@ -51,27 +51,23 @@ $menu-third-delay:1000ms;
 .third
 {
     animation: menu $menu-dur $menu-third-delay  backwards;
- 
-}
+ }
 /*loading spinner page d'accueil*/
-
-$step-dur:1000ms;
-$step-one-delay:50ms;
-$step-two-delay:200ms;
-$step-three-delay:150ms;
-$step-trans-delay:2400ms;
-/*Si mise en place migration des step à leur place*/
-$step-trans-dur:600ms;
-$step-one-translate:-110px -385px;
+/*boules*/
+$step-dur:2000ms;
+$step-one-delay:150ms;
+$step-two-delay:850ms;
+$step-three-delay:1650ms;
     @keyframes step{
         0% {
             transform: scale(0);
-            opacity: 0;
+            opacity: 1;
+                      
         }
         30% {
             transform: scale(1.5);
             opacity: 1;
-        }    
+                    }    
         50%{
             transform: scale(1);
             opacity: 1;
@@ -80,22 +76,36 @@ $step-one-translate:-110px -385px;
             transform: scale(0.5); 
             opacity: 0.5;
         }
-        
-        100%{
+                100%{
             transform:scale(0);
             opacity:0;
         }
     }
-    
-
+ 
 .stepone{
-animation:step $step-dur $step-one-delay 5;
+animation:step $step-dur $step-one-delay both 3;
 }
 .steptwo{
-    animation:step $step-dur $step-two-delay 5;
- 
-}
+    animation:step $step-dur $step-two-delay both 3 ;
+  }
 .stepthree{
-    animation:step $step-dur $step-three-delay 5;
- 
+    animation:step $step-dur $step-three-delay both 3 ;
+  }
+/*body*/
+$body-dur:18450ms;
+
+@keyframes bodyload{
+    0%{
+    opacity:0 ;
+    }
+50%{
+    opacity: 1;
+}
+    100%{
+opacity: 1;
+    }
+
+}
+body{
+    animation:bodyload $body-dur;
 }

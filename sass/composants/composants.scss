@@ -282,15 +282,17 @@ nav{
 /*loading spinner*/
 
 .loadingspinner{
- height: 2px;
+ height: 100%;
  width: 100%;
  display: flex;
  align-items: center;
  justify-content: center;
+ transform: scale(1);
  opacity: 1;
+ z-index: 10;
  position: relative;
- 
-    
+ perspective-origin:center;
+  
 }
 .load{
     display: flex;
@@ -300,7 +302,7 @@ background-color: $color-footer;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-        z-index: 4;
+       
         position: relative;
         top:200px;
         transform:scale(1.5);

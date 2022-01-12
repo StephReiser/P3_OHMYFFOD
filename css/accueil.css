@@ -44,11 +44,11 @@
 }
 
 /*loading spinner page d'accueil*/
-/*Si mise en place migration des step à leur place*/
+/*boules*/
 @keyframes step {
   0% {
     transform: scale(0);
-    opacity: 0;
+    opacity: 1;
   }
   30% {
     transform: scale(1.5);
@@ -68,15 +68,31 @@
   }
 }
 .stepone {
-  animation: step 1000ms 50ms 5;
+  animation: step 2000ms 150ms both 3;
 }
 
 .steptwo {
-  animation: step 1000ms 200ms 5;
+  animation: step 2000ms 850ms both 3;
 }
 
 .stepthree {
-  animation: step 1000ms 150ms 5;
+  animation: step 2000ms 1650ms both 3;
+}
+
+/*body*/
+@keyframes bodyload {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  animation: bodyload 18450ms;
 }
 
 /*Boutons*/
@@ -341,13 +357,16 @@ nav__card h2 {
 
 /*loading spinner*/
 .loadingspinner {
-  height: 2px;
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: scale(1);
   opacity: 1;
+  z-index: 10;
   position: relative;
+  perspective-origin: center;
 }
 
 .load {
@@ -358,7 +377,6 @@ nav__card h2 {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  z-index: 4;
   position: relative;
   top: 200px;
   transform: scale(1.5);
@@ -387,6 +405,8 @@ body {
   justify-content: center;
   font-family: "Roboto", sans-serif;
   font-size: small;
+  position: relative;
+  opacity: 1;
 }
 body a {
   text-decoration: none;
@@ -799,6 +819,8 @@ main {
 .menu__choice--text {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  left: 0;
 }
 .menu__choice--text p {
   font-size: small;
@@ -806,22 +828,30 @@ main {
 .menu__choice--text h2 {
   font-size: medium;
 }
-.menu__choice--text .textonly p h2 {
+.menu__choice--text .textonly {
   white-space: nowrap;
-  display: block;
-  overflow: hidden;
   text-overflow: ellipsis;
-  width: 230px;
+  overflow: hidden;
+}
+.menu__choice--text .textonly__title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu__choice--text .textonly__description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .card__menu {
   justify-content: space-between;
   align-items: flex-end;
   width: 320px;
+  height: 86px;
   border-radius: 30px 30px 30px 30px;
   padding-left: 15px;
   padding-right: 15px;
-  z-index: 3;
   position: relative;
 }
 
@@ -872,3 +902,42 @@ main {
 }
 
 /*# sourceMappingURL=accueil.css.map */
+
+.chargement {
+  position: fixed;
+  height: 100vh;
+  right: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0.9;
+  z-index: 2;
+  animation: chargement 1.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes chargement {
+  100% {
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+.fa-cog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150px;
+  margin-top: 20%;
+  animation: loading 6s linear infinite;
+  animation-fill-mode: forwards;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(#9356dc, #ff79da);
+}
+ 
+  @keyframes loading {
+      100% {
+          transform:rotate(360deg);
+      }
+  }
+  

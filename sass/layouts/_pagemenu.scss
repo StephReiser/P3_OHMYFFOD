@@ -7,14 +7,16 @@ main{
     justify-items: center;
     display: grid;
     grid-auto-flow: column;
+    
        
         grid-template-rows:350px 350px 350px 100px;
         height: auto;
-        max-width: 1050px;
+        max-width: 1280px;
         
     @media (min-width: 764px) and(max-width:991px) {
         grid-template-columns:200px 350px 200px;
         grid-template-rows:1fr;
+        justify-content: space-between;
     }
     @media (min-width: 992px) {
         grid-template-columns: 1fr 1fr 1fr;
@@ -43,13 +45,12 @@ main{
     justify-content: space-between;
     align-items: baseline;
     height: 80px;
-    
     margin-bottom: -20px;
     border-top-left-radius: 35px;
     border-top-right-radius:35px ;
     position: absolute;
     width: 390px;
-    padding-left: 15px;
+    padding-left: 35px;
     padding-right: 15px;
        
     h1{
@@ -79,14 +80,16 @@ main{
     .cardgost{
     
         @extend %flexcard;
-        width: auto;
+        width: 40px;
         height: 20px;
         margin-right: 250px;
         border-bottom:3px solid $color-tertiary;
-        border-inline-start-width: 15px;
+       
+     
             
         }  
 .menu__choice{
+    
     @extend %cardcolumns;
     grid-template-rows: repeat(4,1fr) ;  
     width: 90%;
@@ -101,38 +104,49 @@ main{
     } 
   
 &--price{
+    border-radius: 30px 30px 30px 30px;
+    background-color: white;
     display: flex;
     align-items: flex-end;
     height: 100%;
-    width: 35px;
-    left:260px;
+    width: 40px;
+    left:270px;
     top: 0;
     position: absolute;
     transition: transform 500ms ease-in-out;
-  
     
 } 
 &--text{
+
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    left:0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+   
+    
+   
  
  
   p {
      font-size: map-get($font-size, menutext);
+     
  
     }
     h2{
      font-size: map-get($font-size, article);  
     }
    .textonly {
+    width: 240px;   
+    padding-left: 2px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    &__title{
-   
-    white-space: nowrap;
+    transform: scaleX(1);
+    transform: transform 500ms ease-in-out;
+    transform-origin: left;
+         &__title{
+       white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     }
@@ -145,14 +159,12 @@ main{
                
  }
 }
-  
-
- .card__menu{
+   .card__menu{
     justify-content: space-between;
     align-items: flex-end;
     @extend %flexcard;
 width: 320px;
-height: 86px;
+height: 66px;
 border-radius: 30px 30px 30px 30px;
 padding-left: 15px;
 padding-right: 15px;
@@ -188,8 +200,8 @@ position: relative;
     border-bottom-right-radius: 30px;
     float: right;
     height:100%;
-  left: 240px;
-    width: 80px;
+    left: 250px;
+    width: 70px;
     transform:scaleX(0);
     transition: transform 500ms;
     transform-origin:right ;

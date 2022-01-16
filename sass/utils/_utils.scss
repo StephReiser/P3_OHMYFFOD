@@ -1,5 +1,5 @@
 /*map*/
-$font-size: (logo:xx-large, article:medium, title:large, body:small, menutext:small,heart:15px);
+$font-size: (logo:xx-large, article:medium, title:large, body:small, menutext:small,heart:15px, bigheart:30px);
 
 
 
@@ -53,36 +53,29 @@ $menu-third-delay:1000ms;
     animation: menu $menu-dur $menu-third-delay  backwards;
  }
 /*loading spinner page d'accueil*/
+
 /*boules*/
-$step-dur:2000ms;
+$step-dur:1000ms;
 $step-one-delay:150ms;
-$step-two-delay:850ms;
-$step-three-delay:1650ms;
+$step-two-delay:425ms;
+$step-three-delay:825ms;
     @keyframes step{
         0% {
             transform: scale(0);
             opacity: 1;
-                      
+                    
         }
-        30% {
-            transform: scale(1.5);
-            opacity: 1;
-                    }    
+         
         50%{
             transform: scale(1);
-            opacity: 1;
+            opacity: 1.5;
         }
-        70%{
-            transform: scale(0.5); 
-            opacity: 0.5;
-        }
-                100%{
+                       100%{
             transform:scale(0);
             opacity:0;
         }
     }
- 
-.stepone{
+ .stepone{
 animation:step $step-dur $step-one-delay both 3;
 }
 .steptwo{
@@ -91,21 +84,3 @@ animation:step $step-dur $step-one-delay both 3;
 .stepthree{
     animation:step $step-dur $step-three-delay both 3 ;
   }
-/*body*/
-$body-dur:18450ms;
-
-@keyframes bodyload{
-    0%{
-    opacity:0 ;
-    }
-50%{
-    opacity: 1;
-}
-    100%{
-opacity: 1;
-    }
-
-}
-body{
-    animation:bodyload $body-dur;
-}

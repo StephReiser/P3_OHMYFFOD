@@ -19,58 +19,6 @@
 }
 
 /*Condition */
-/*Keyframes*/
-/*Apparition pagesmenu*/
-@keyframes menu {
-  0% {
-    transform: translateY(35px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.first {
-  animation: menu 1000ms 50ms backwards;
-}
-
-.second {
-  animation: menu 1000ms 500ms backwards;
-}
-
-.third {
-  animation: menu 1000ms 1000ms backwards;
-}
-
-/*loading spinner page d'accueil*/
-/*boules*/
-@keyframes step {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1);
-    opacity: 1.5;
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
-}
-.stepone {
-  animation: step 1000ms 150ms both 3;
-}
-
-.steptwo {
-  animation: step 1000ms 425ms both 3;
-}
-
-.stepthree {
-  animation: step 1000ms 825ms both 3;
-}
-
 /*boutons*/
 .btnstyle {
   transform: scale(1);
@@ -114,7 +62,7 @@
   z-index: 3;
   top: 229px;
   right: 45px;
-  transition: opacity 550ms;
+  transition: opacity 1000ms;
 }
 .heart__accueil:hover {
   opacity: 1;
@@ -236,8 +184,36 @@
 @keyframes chargement {
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
+/*boules*/
+@keyframes step {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1.5;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.stepone {
+  animation: step 1000ms 150ms both 3;
+}
+
+.steptwo {
+  animation: step 1000ms 425ms both 3;
+}
+
+.stepthree {
+  animation: step 1000ms 825ms both 3;
+}
+
 .load {
   display: flex;
   align-items: center;
@@ -255,6 +231,30 @@
   font-family: "Shrikhand", cursive;
   color: white;
   font-size: xx-large;
+}
+
+/*Keyframes*/
+/*Apparition pagesmenu*/
+@keyframes menu {
+  0% {
+    transform: translateY(35px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.first {
+  animation: menu 1000ms 50ms backwards;
+}
+
+.second {
+  animation: menu 1000ms 500ms backwards;
+}
+
+.third {
+  animation: menu 1000ms 1000ms backwards;
 }
 
 /*Boutons*/

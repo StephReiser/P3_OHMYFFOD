@@ -28,6 +28,7 @@
     
     }
 }
+
 /*Disparition icone coeur page accueil*/
 .heartcontainer{
     i{
@@ -45,7 +46,7 @@
         z-index: 3;
         top: 229px;
        right:45px;
-         transition: opacity 550ms;
+         transition: opacity 1000ms;
       &:hover {
         opacity: 1;
     }
@@ -167,9 +168,38 @@
    @keyframes chargement{
        100%{
            opacity: 0;
+           visibility: hidden;
       
        }
    }
+   /*boules*/
+
+   @keyframes step{
+    0% {
+        transform: scale(0);
+        opacity: 1;
+                
+    }
+     
+    50%{
+        transform: scale(1);
+        opacity: 1.5;
+    }
+                   100%{
+        transform:scale(0);
+        opacity:0;
+    }
+}
+.stepone{
+animation:step $step-dur $step-one-delay both 3;
+}
+.steptwo{
+animation:step $step-dur $step-two-delay both 3 ;
+}
+.stepthree{
+animation:step $step-dur $step-three-delay both 3 ;
+}
+
    .load{
        display: flex;
        align-items: center;
@@ -189,3 +219,30 @@
        font-size: map-get($font-size, logo);
    }
      }
+
+     /*Keyframes*/
+/*Apparition pagesmenu*/
+
+@keyframes menu{
+    0%{
+        transform:translateY(+35px);
+        opacity: 0;
+    }
+
+     100%{
+        transform:translateY(0);
+        opacity: 1;
+    }
+}
+.first{
+    animation: menu $menu-dur $menu-first-delay backwards;
+  
+}
+.second{
+    animation: menu $menu-dur $menu-second-delay  backwards;
+   }
+.third
+{
+    animation: menu $menu-dur $menu-third-delay  backwards;
+ }
+     

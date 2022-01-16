@@ -83,8 +83,7 @@ nav{
     background-color: #F2F2F2;
     @include shadow-button;
     transition: box-shadow 250ms, scale 50ms 200ms;
-   
-    
+      
      }
  
   .step{
@@ -99,7 +98,6 @@ nav{
       transition: margin-left 500ms;
       position: absolute;
       z-index: 3;
-   
            
       p{
           color:white;

@@ -48,6 +48,7 @@
 nav{
     @extend %cardcolumns;
     grid-template-rows: repeat(4,1fr) ;
+  
       
     @media (min-width:1024px) {
         grid-auto-flow: row;
@@ -107,11 +108,12 @@ nav{
 /*Boutons coeur accueil*/
    .heartcontainer--accueil{
     width: 10x;
-    font-size: map-get($font-size, bigheart);
+   height: map-get($font-size, bigheart);
     align-items: center;
     justify-content: center;
     padding-right: 15px;
     padding-top: 20px;
+    
           i{
         opacity: 1;
         position: relative;
@@ -123,7 +125,7 @@ nav{
 /*Bouton coeur page menu*/
 .heartcontainer--menu{
     width: 10x;
-    font-size: map-get($font-size, bigheart);
+    height: map-get($font-size, bigheart);
     align-items: center;
     justify-content: center;
     padding-right: 15px;

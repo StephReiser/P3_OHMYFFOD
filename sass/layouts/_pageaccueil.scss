@@ -97,6 +97,12 @@ nav{
   padding-bottom: 10px;
   background-color: white;  
   border-radius: 15px 15px 15px 15px;
+  @include shadow-button;
+  &:hover {
+    cursor: pointer;
+    @include shadow-button-hover;
+    }
+
     @media (min-width: 992px) {
     width:460px ;
     height: 300px;

@@ -154,6 +154,9 @@
     justify-content: center;
     align-content: center;
     top:0;
+    left:0;
+    right:0;
+    bottom:0;
     position: fixed;
     z-index: 2;
     background-image:linear-gradient($color-tertiary,$color-primary);

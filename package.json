@@ -24,7 +24,7 @@
   },
   "scripts": {
    "sass":"sass --watch sass/accueil.scss:css/accueil.css"
-    
+ 
   },
   
   "repository": {
@@ -33,7 +33,8 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
+
+  "bugs": { 
     "url": "https://github.com/StephReiser/P3_OHMYFFOD/issues"
   },
   "homepage": "https://github.com/StephReiser/P3_OHMYFFOD#readme",

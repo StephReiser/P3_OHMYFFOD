@@ -22,29 +22,15 @@
 /*Condition */
 /*boutons*/
 .btnstyle {
+  opacity: 1;
   transform: scale(1);
+  transition: opacity 250ms, scale 50ms 150ms;
 }
 .btnstyle:hover {
   cursor: pointer;
   transform: scale(1.1);
-}
-.btnstyle:hover::after {
-  opacity: 1;
-}
-.btnstyle::after {
-  content: "";
-  cursor: pointer;
-  background-color: #a06be1;
-  border-radius: 20px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  opacity: 0.8;
   box-shadow: 10px 10px 20px #343638;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms, scale 50ms 150ms;
 }
 
 /*Disparition icone coeur page accueil*/
@@ -157,10 +143,12 @@
 
 .card__decoration--accueil {
   transform: scale(1);
+  transition: opacity 250ms, scale 50ms 150ms;
 }
 .card__decoration--accueil:hover {
   cursor: pointer;
   box-shadow: 10px 10px 20px #343638;
+  opacity: 0.8;
   transform: scale(1.1);
 }
 .card__decoration--accueil:hover > i {

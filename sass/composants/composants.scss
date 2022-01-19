@@ -41,7 +41,7 @@
 }
    h2{
        padding-left: 10px;
-       padding-top: -20px;
+       top: 20px;
    }
      }
   /*Cartes accueil*/
@@ -107,11 +107,11 @@ nav{
   }
 /*Boutons coeur accueil*/
    .heartcontainer--accueil{
-    width: 10x;
+    width: 10px;
    height: map-get($font-size, bigheart);
     align-items: center;
     justify-content: center;
-    padding-right: 15px;
+    padding-right: 45px;
     padding-top: 20px;
     
           i{
@@ -124,11 +124,11 @@ nav{
   }
 /*Bouton coeur page menu*/
 .heartcontainer--menu{
-    width: 10x;
+    width: 10px;
     height: map-get($font-size, bigheart);
     align-items: center;
     justify-content: center;
-    padding-right: 15px;
+    padding-right: 45px;
         i{
         opacity: 1;
         position: relative;

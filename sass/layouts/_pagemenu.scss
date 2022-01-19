@@ -9,6 +9,7 @@ main{
         grid-template-rows:350px 350px 350px 100px;
         height: auto;
         max-width: 1280px;
+        margin-bottom: -5px;
       
          @media (min-width: 764px) and(max-width:991px) {
         grid-template-columns:200px 350px 200px;
@@ -59,6 +60,7 @@ main{
     height: 300px;
     object-fit: cover;
      position: relative;
+     margin-bottom: -3px;
   @media (min-width: 764px) {
        height: 600px;
        max-width: 1000px;
@@ -76,7 +78,7 @@ main{
                  }  
 .menu__choice{
         @extend %cardcolumns;
-        grid-auto-flow: none;
+        grid-auto-flow:row;
     grid-template-rows: repeat(4,1fr) ;  
     width: 90%;
     @media (min-width: 764px) and(max-width:991px) {
@@ -88,47 +90,61 @@ main{
         width: auto;
     } 
   &--price{
-    border-radius: 30px 30px 30px 30px;
+    border-radius: 0px 30px 30px 0px;
     background-color: white;
     display: flex;
     align-items: flex-end;
     height: 100%;
-    width: 40px;
-    left:270px;
+    width: 50px;
     top: 0;
-    position: absolute;
+    margin-left: 10px;
     transition: transform 500ms ease-in-out;
     } 
 &--text{
+    margin: 0;  
+    left: 0;
     display: flex;
     flex-direction: column;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow-x: hidden;
-      p {
-     font-size: map-get($font-size, menutext);
-         }
+    overflow: hidden;
+    width: 232px;
+   
+    /*
+    transition: transform 500ms ease-in-out;*/
+   
     h2{
-     font-size: map-get($font-size, article);  
-    }
+      font-size: map-get($font-size, article);  
+      width:auto;
+      }
+        
    .textonly {
-    width: 240px;   
-    padding-left: 2px;
+    padding-right: 2px;
+
+    
+ 
+    
+    &__title{
+    width: auto;
+    position: relative;
+    margin: 0;   
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    transform: scaleX(1);
-    transform: transform 500ms ease-in-out;
-    transform-origin: left;
-         &__title{
-       white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+     
     }
     &__description{
-     white-space: nowrap;
+    position: relative;
+    margin: 0;
+    white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    p {
+      font-size: map-get($font-size, menutext);
+      width:auto;
+      
+     
+          }
     }
           }
               
@@ -136,8 +152,7 @@ main{
 }
    .card__menu{
     justify-content: space-between;
-    align-items: flex-end;
-    @extend %flexcard;
+       @extend %flexcard;
 width: 320px;
 height: 66px;
 border-radius: 30px 30px 30px 30px;

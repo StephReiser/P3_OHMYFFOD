@@ -146,8 +146,7 @@
         transform:translateY(+35px);
         opacity: 0;
     }
-
-     100%{
+    100%{
         transform:translateY(0);
         opacity: 1;
     }
@@ -180,7 +179,7 @@
     z-index: 2;
     background-image:linear-gradient($color-tertiary,$color-primary);
     opacity: 0.9;
-    animation: chargement 2500ms forwards;
+    animation: chargement 3500ms forwards;
     animation-delay: 1500ms;
        }
    @keyframes chargement{
@@ -190,27 +189,25 @@
         }
    }
  .circle{
-   
+   position: relative;
      display: flex;
      justify-content: center;
      align-items: center;
-    border:6px solid $color-footer;
-    border-top-color: $color-secondary;
-    border-bottom-color: $color-secondary;
+    border:15px solid transparent ;
+    border-top-color: $color-footer;
+    border-bottom-color: $color-footer;
      width: 150px;
      height: 150px;
      border-radius: 50%;
-    position: relative;
-     top:200px;
+    top:200px;
     @include shrikhand;
     font-size: map-get($font-size, logo);
-    opacity: 1;
-    transform: rotate(0);
-    animation: spin 1000ms linear forwards;
+   
+    animation: spin 3000ms linear infinite;
  }
-  
         
 @keyframes spin{
-    0%{ transform: rotate(360°);}
-    100%{ transform: rotate(0°);}
+    0%{ transform: rotate(0°) ;}
+    25%{ transform: rotate(0°);}
+    100%{ transform: rotate(360°) ;}
 }

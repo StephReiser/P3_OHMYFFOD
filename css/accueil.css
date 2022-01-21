@@ -182,29 +182,33 @@
 .loadingspinner {
   height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   background-image: linear-gradient(#98e2cf, #9256dc);
-  opacity: 0.9;
-  animation: chargement 3500ms forwards;
+  animation: chargement 3500ms 1 forwards;
   animation-delay: 1500ms;
 }
-
 @keyframes chargement {
+  0% {
+    opacity: 1;
+    z-index: 10;
+  }
+  90% {
+    opacity: 1;
+    z-index: 10;
+  }
   100% {
     opacity: 0;
-    visibility: hidden;
+    z-index: -1;
+    display: none;
   }
 }
+
 .circle {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,6 +221,12 @@
   top: 200px;
   font-family: "Shrikhand", cursive;
   font-size: x-large;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   animation: spin 3000ms linear infinite;
 }
 

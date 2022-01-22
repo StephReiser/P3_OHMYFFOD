@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: 1fr;
-    background-color: #F2F2F2;
+    background-color:#dbd9d9c7 ;
     .localisation__element {
         grid-column: 3/4;
         grid-row: 1;
@@ -21,7 +21,7 @@
     input{
         padding-left: 10px;
         border: none;
-        background-color: #F2F2F2;
+        background-color: #dbd9d9c7 ;
     }
     i{
         padding-left: 50px;
@@ -77,6 +77,9 @@ nav{
        grid-column: 1/2;
        grid-row:1;
        padding-left: 25px;
+       @media (min-width: 769px) {
+        padding-left: 90px;
+    } 
         }
 }
 .img {

@@ -1,9 +1,14 @@
 @charset "UTF-8";
 /* coulueurs*/
+/*delay keyframes menu*/
+/*mixin*/
+/*map*/
+/*placeholders*/
 .check__animation, .card__menu, .cardgost, nav .nav__card, .step, nav__card {
   display: flex;
   align-items: center;
 }
+
 .menu__choice, nav {
   display: grid;
   grid-template-columns: 1fr;
@@ -12,6 +17,8 @@
   align-items: flex-end;
   justify-items: center;
 }
+
+/*Condition */
 /*boutons*/
 .btnstyle {
   opacity: 1;
@@ -24,6 +31,7 @@
   opacity: 0.8;
   box-shadow: 10px 10px 20px #343638;
 }
+
 /*Disparition icone coeur page accueil*/
 .heartcontainer i {
   opacity: 1;
@@ -32,6 +40,7 @@
 .heartcontainer i:hover {
   opacity: 0;
 }
+
 /*Apparition coeur coloré page accueil*/
 .heart__accueil {
   position: absolute;
@@ -65,6 +74,7 @@
   transform: rotate(45deg);
   transform-origin: 100% 100%;
 }
+
 /*Disparition icone coeur page menu*/
 .bigheartcontainer {
   width: 10px;
@@ -80,6 +90,7 @@
 .bigheartcontainer i:hover {
   opacity: 0;
 }
+
 /*Apparition coeur coloré page menu*/
 .heart__menu {
   position: absolute;
@@ -142,6 +153,8 @@
 .card__decoration--accueil:hover > i {
   color: #9256dc;
 }
+
+/*Keyframes*/
 /*Apparition pagesmenu*/
 @keyframes menu {
   0% {
@@ -194,15 +207,17 @@
     display: none;
   }
 }
+
 .circle {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 15px solid transparent;
   border-top-color: #333638;
   border-bottom-color: #333638;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   top: 200px;
   font-family: "Shrikhand", cursive;
@@ -213,8 +228,10 @@
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 10;
   animation: spin 3000ms linear infinite;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0°);
@@ -238,6 +255,7 @@
   position: relative;
   z-index: 1;
 }
+
 .btn {
   grid-row: 4;
   padding: 50px;
@@ -253,6 +271,7 @@
     grid-column: 2;
   }
 }
+
 /*Pastille nouveauté*/
 .new {
   color: green;
@@ -278,6 +297,7 @@
   padding-left: 10px;
   top: 20px;
 }
+
 /*Cartes accueil*/
 nav {
   grid-template-rows: repeat(4, 1fr);
@@ -309,11 +329,13 @@ nav__card h2 {
     grid-row: 1;
   }
 }
+
 .card__decoration--accueil {
   background-color: #F2F2F2;
   box-shadow: 4px 4px 5px #ABB0B4;
   transition: box-shadow 250ms, scale 50ms 200ms;
 }
+
 .step {
   justify-content: center;
   background-color: #9256dc;
@@ -329,6 +351,7 @@ nav__card h2 {
 .step p {
   color: white;
 }
+
 /*Boutons coeur accueil*/
 .heartcontainer--accueil {
   width: 10px;
@@ -344,6 +367,7 @@ nav__card h2 {
   z-index: 1;
   font-size: 30px;
 }
+
 /*Bouton coeur page menu*/
 .heartcontainer--menu {
   width: 10px;
@@ -358,6 +382,7 @@ nav__card h2 {
   z-index: 1;
   font-size: 30px;
 }
+
 /*Principaux éléments*/
 * {
   box-sizing: border-box;
@@ -391,7 +416,8 @@ header {
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   /*Header des menus*/
-  }
+  /* Icone flêche*/
+}
 header .menu--header {
   grid-column: 2/5;
   display: flex;
@@ -409,6 +435,7 @@ header i {
   padding-right: 15px;
   color: black;
 }
+
 /*Footer*/
 footer {
   display: grid;
@@ -493,6 +520,7 @@ footer .contact {
     grid-column: 4;
   }
 }
+
 /*Présentation de l'entreprise page d'accueil*/
 .presentation {
   padding-bottom: 20px;
@@ -500,27 +528,31 @@ footer .contact {
   align-content: center;
   background-color: #f2f2f2c7;
 }
+
 .localisation {
   padding: 10px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
-  background-color: #dbd9d9c7;
+  background-color: #e4e6e7;
+  box-shadow: 4px 4px 5px #abb0b5 inset;
 }
 .localisation .localisation__element {
   grid-column: 3/4;
   grid-row: 1;
   display: flex;
+  background-color: #e4e6e7;
 }
 .localisation input {
   padding-left: 10px;
   border: none;
-  background-color: #dbd9d9c7;
+  background-color: #e4e6e7;
 }
 .localisation i {
   padding-left: 50px;
 }
+
 /*Cartes accueil et navigation en étapes*/
 nav {
   grid-template-rows: repeat(4, 1fr);
@@ -550,6 +582,7 @@ nav .nav__card h2 {
     grid-row: 1;
   }
 }
+
 /*Section principale*/
 section {
   display: grid;
@@ -578,6 +611,7 @@ section h1 {
     padding-left: 90px;
   }
 }
+
 .img {
   width: 100%;
   height: 205px;
@@ -587,6 +621,7 @@ section h1 {
   position: relative;
   z-index: 3;
 }
+
 .article {
   display: flex;
   flex-direction: column;
@@ -665,6 +700,7 @@ section h1 {
     grid-row: 3;
   }
 }
+
 .article__restaucontainer {
   border-radius: 20px 20px 20px 20px;
   grid-row: 2;
@@ -687,6 +723,7 @@ section h1 {
 .article__restaucontainer h2 {
   text-align: left;
 }
+
 /*section propre aux menus*/
 main {
   height: auto;
@@ -712,6 +749,7 @@ main {
     grid-template-rows: 1fr;
   }
 }
+
 .restaucontainer {
   height: 300px;
   width: 100%;
@@ -727,6 +765,7 @@ main {
     border-top-right-radius: 35px;
   }
 }
+
 .restaucontainer__title {
   background-color: #F2F2F2;
   display: flex;
@@ -744,6 +783,7 @@ main {
   font-family: "Shrikhand", cursive;
   font-size: x-large;
 }
+
 /*Positionnement de l'image du menu*/
 .img__menu {
   width: 100%;
@@ -761,6 +801,7 @@ main {
     border-top-right-radius: 35px;
   }
 }
+
 /*Groupement de cartes menu*/
 .cardgost {
   width: 40px;
@@ -768,6 +809,7 @@ main {
   margin-right: 250px;
   border-bottom: 3px solid #98e2cf;
 }
+
 .menu__choice {
   grid-auto-flow: row;
   grid-template-rows: repeat(4, 1fr);
@@ -805,6 +847,8 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
   width: 232px;
+  /*
+  transition: transform 500ms ease-in-out;*/
 }
 .menu__choice--text h2 {
   font-size: medium;
@@ -832,6 +876,7 @@ main {
   font-size: small;
   width: auto;
 }
+
 .card__menu {
   justify-content: space-between;
   width: 320px;
@@ -841,6 +886,7 @@ main {
   padding-right: 15px;
   position: relative;
 }
+
 .card__decoration--menu {
   background-color: white;
   box-shadow: 4px 4px 5px #ABB0B4;
@@ -850,6 +896,7 @@ main {
   cursor: pointer;
   box-shadow: 10px 10px 20px #343638;
 }
+
 .check {
   display: flex;
   background-color: #98e2cf;
@@ -868,6 +915,7 @@ main {
   transition: transform 500ms;
   transform-origin: right;
 }
+
 .check__animation {
   height: 20px;
   width: 20px;
@@ -884,4 +932,5 @@ main {
   color: #98e2cf;
   z-index: 4;
 }
+
 /*# sourceMappingURL=accueil.css.map */

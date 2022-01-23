@@ -11,17 +11,18 @@
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: 1fr;
-    background-color:#dbd9d9c7 ;
+    background-color:hsl(207, 6%,90%);
+    box-shadow:4px 4px 5px hsl(207, 6%, 69%) inset; 
     .localisation__element {
         grid-column: 3/4;
         grid-row: 1;
         display: flex;
-     
-    }
+        background-color:hsl(207, 6%,90%);
+         }
     input{
         padding-left: 10px;
         border: none;
-        background-color: #dbd9d9c7 ;
+        background-color:hsl(207, 6%, 90%);
     }
     i{
         padding-left: 50px;

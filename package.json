@@ -25,7 +25,7 @@
   },
   "scripts": {
     "sass": "sass --watch sass/accueil.scss:css/accueil.css",
-    "prefix":css/accueil.css --use autoprefixer -d css/prefixed/"
+    "prefix":"postcss/css/accueil.css --use autoprefixer -d /css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist":"last 4 versions" ,
   "bugs": {
     "url": "https://github.com/StephReiser/P3_OHMYFFOD/issues"
   },

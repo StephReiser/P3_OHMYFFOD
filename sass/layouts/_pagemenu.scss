@@ -110,8 +110,8 @@ main{
     overflow: hidden;
     width: 232px;
    
-    /*
-    transition: transform 500ms ease-in-out;*/
+    
+    transition: transform 500ms ease-in-out;
    
     h2{
       font-size: map-get($font-size, article);  

@@ -11,8 +11,7 @@ $font-size: (logo:x-large, article:medium, title:large, body:small, menutext:sma
 }
 %cardcolumns{
     display:grid;
-    grid-template-columns:1fr ;
-    height: auto;
+       height: auto;
      grid-row-gap: 15px;
     align-items:flex-end;
     justify-items: center;  

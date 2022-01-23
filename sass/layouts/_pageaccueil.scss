@@ -32,11 +32,14 @@
 nav{
     @extend %cardcolumns;
     grid-template-rows: repeat(4,1fr) ;
-       
+
+     @media (min-width:768px) {
+        grid-template-rows:1fr;
+     } 
     @media (min-width:1024px) {
         grid-auto-flow: row;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+       
     }
     .nav__card{
         @extend %flexcard;
@@ -59,6 +62,31 @@ nav{
         } 
     }
  } 
+ .card__decoration--accueil{
+    background-color: #F2F2F2;
+    @include shadow-button;
+    transition: box-shadow 250ms, scale 50ms 200ms;
+      
+     }
+ 
+  .step{
+    @extend %flexcard;
+    justify-content: center;
+      background-color: $color-primary;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      padding-bottom:5px;
+      margin-left: -20px;
+      transition: margin-left 500ms;
+      position: absolute;
+      z-index: 3;
+           
+      p{
+          color:white;
+                 
+      }
+  }
   /*Section principale*/
   section{
     display: grid;

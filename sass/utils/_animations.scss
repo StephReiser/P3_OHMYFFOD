@@ -175,7 +175,7 @@
         z-index: 10;
       background-image:linear-gradient($color-tertiary,$color-primary);
       animation: hideLoader 3500ms 1 forwards;
-      animation-delay: 1500ms;
+      
     }
  
     .loading::after
@@ -192,7 +192,7 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      animation: spin 1s linear infinite;
+      animation: spin 1000ms linear infinite;
    
     }
  

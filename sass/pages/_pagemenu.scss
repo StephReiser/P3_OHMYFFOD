@@ -37,11 +37,10 @@ main{
         }
    }
 .restaucontainer__title{
+  @extend %flexbaseline;
     background-color: #F2F2F2;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    height: 80px;
+       justify-content: space-between;
+       height: 80px;
      border-top-left-radius: 35px;
     border-top-right-radius:35px ;
     position: absolute;
@@ -70,7 +69,7 @@ main{
   }
       /*Groupement de cartes menu*/
     .cardgost{
-            @extend %flexcard;
+            @extend %flexcenter;
         width: 40px;
         height: 20px;
         margin-right: 250px;
@@ -152,7 +151,7 @@ main{
 }
    .card__menu{
     justify-content: space-between;
-       @extend %flexcard;
+       @extend %flexcenter;
 width: 320px;
 height: 66px;
 border-radius: 30px 30px 30px 30px;
@@ -197,7 +196,7 @@ position: relative;
     background-color: white;
     position: absolute;
     z-index: 3;
-    @extend %flexcard;
+    @extend %flexcenter;
     justify-content: center;
     transform: rotate(-360deg);
     transition: transform 500ms ease-in-out;

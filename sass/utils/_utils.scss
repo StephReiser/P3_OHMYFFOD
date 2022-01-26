@@ -1,14 +1,15 @@
 /*map*/
 $font-size: (logo:x-large, article:medium, title:large, body:small, menutext:small,heart:15px, bigheart:30px);
 
-
-
 /*placeholders*/
-%flexcard{
+%flexcenter{
     display: flex;
     align-items: center;
-   
-}
+   }
+   %flexbaseline{
+    display: flex;
+    align-items: baseline;
+   }  
 %cardcolumns{
     display:grid;
        height: auto;
@@ -16,9 +17,7 @@ $font-size: (logo:x-large, article:medium, title:large, body:small, menutext:sma
     align-items:flex-end;
     justify-items: center;  
 }
-
 /*Condition */
-
 @if( lightness($color-footer) < 22% ){$color-text:#ffffff;}
 
 

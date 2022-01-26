@@ -9,6 +9,11 @@
   align-items: center;
 }
 
+.restaucontainer__title, footer .footer__handshelpip, footer .footer__restaurantip, header .menu--header {
+  display: flex;
+  align-items: baseline;
+}
+
 .menu__choice, nav {
   display: grid;
   height: auto;
@@ -341,8 +346,6 @@ header {
 }
 header .menu--header {
   grid-column: 2/5;
-  display: flex;
-  align-items: baseline;
   justify-content: center;
   height: 100px;
 }
@@ -373,7 +376,6 @@ footer {
     grid-template-rows: 1fr 1fr;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
     padding-right: 25px;
     padding-left: 100px;
   }
@@ -400,8 +402,6 @@ footer a {
 }
 footer .footer__restaurantip {
   grid-column: 1/4;
-  display: flex;
-  align-items: baseline;
 }
 @media (min-width: 600px) {
   footer .footer__restaurantip {
@@ -412,7 +412,6 @@ footer .footer__restaurantip {
 footer .footer__handshelpip {
   grid-column: 1/4;
   display: flex;
-  align-items: baseline;
 }
 @media (min-width: 600px) {
   footer .footer__handshelpip {
@@ -715,9 +714,7 @@ main {
 
 .restaucontainer__title {
   background-color: #F2F2F2;
-  display: flex;
   justify-content: space-between;
-  align-items: baseline;
   height: 80px;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;

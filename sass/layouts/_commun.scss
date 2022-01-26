@@ -34,8 +34,7 @@ header{
       /*Header des menus*/
     .menu--header{
         grid-column: 2/5;
-        display: flex;
-        align-items: baseline;
+       @extend %flexbaseline;
         justify-content:center;
         height: 100px;
        }
@@ -67,8 +66,7 @@ footer{
  grid-template-rows: 1fr 1fr;
  flex-direction: row;
  justify-content: space-between;
- align-items: baseline;
- padding-right: 25px;
+  padding-right: 25px;
  padding-left: 100px;
    }
      
@@ -95,8 +93,7 @@ footer{
     }
 .footer__restaurantip{
    grid-column: 1/4;
-   display: flex;
-   align-items: baseline;
+   @extend %flexbaseline;
    @media (min-width: 600px) {
      grid-row: 2;
      grid-column: 1;
@@ -107,7 +104,7 @@ footer{
  .footer__handshelpip{
    grid-column: 1/4;
    display: flex;
-   align-items: baseline;  
+   @extend %flexbaseline; 
    @media (min-width: 600px) {
      grid-row: 2;
      grid-column: 2;

@@ -20,7 +20,7 @@
        align-content: stretch;
         display: flex;
     }
-        @media (min-width: 764px) {
+        @media (min-width: 768px) {
             grid-column: 2;
     }
      }
@@ -34,7 +34,7 @@
       z-index: 4;
    top: 20px;
  right: 20px;
-     @media (min-width: 764px) and(max-width:991px) {
+     @media (min-width: 768px) and(max-width:991px) {
    margin-left: 225px;  }
    @media (min-width:992px) {
     margin-left: 330px;
@@ -44,7 +44,6 @@
        top: 20px;
    }
      }
- 
  
 /*Boutons coeur accueil*/
    .heartcontainer--accueil{

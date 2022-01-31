@@ -60,7 +60,7 @@ footer{
    background-color:$color-footer ;
    @include color;
     padding-left: 25px;
-   @media (min-width: 600px) {
+   @media (min-width: 768px) {
      grid-template-columns: repeat(4,1fr);  
  display:grid ;
  grid-template-rows: 1fr 1fr;
@@ -75,7 +75,7 @@ footer{
        grid-row: 1;
         @include shrikhand;
         font-size: map-get($font-size, body);
-        @media (min-width: 600px) {
+        @media (min-width: 768px) {
             font-size: map-get($font-size, logo);
           grid-column:1;
           font-weight: bold;
@@ -94,7 +94,7 @@ footer{
 .footer__restaurantip{
    grid-column: 1/4;
    @extend %flexbaseline;
-   @media (min-width: 600px) {
+   @media (min-width: 768px) {
      grid-row: 2;
      grid-column: 1;
  
@@ -105,7 +105,7 @@ footer{
    grid-column: 1/4;
    display: flex;
    @extend %flexbaseline; 
-   @media (min-width: 600px) {
+   @media (min-width: 768px) {
      grid-row: 2;
      grid-column: 2;
  
@@ -117,7 +117,7 @@ i{
 }
 .legalnotice{
    grid-column: 1/4;
-   @media (min-width: 600px) {
+   @media (min-width: 768px) {
      grid-row: 2;
      grid-column: 3;
  
@@ -126,7 +126,7 @@ i{
 }
 .contact{
    grid-column: 1/2;
-   @media (min-width: 600px) {
+   @media (min-width: 768px) {
      grid-row: 2;
      grid-column: 4;
  

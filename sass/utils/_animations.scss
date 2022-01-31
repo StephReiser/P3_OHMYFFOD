@@ -60,14 +60,12 @@
     align-items: center;
     justify-content: center;
     padding-right: 15px;
-    
-    i{
+        i{
         opacity: 1;
         transition:opacity 50ms ;
         &:hover{
             opacity:0;
-        
-        }
+                }
           }
             }
         /*Apparition coeur coloré page menu*/   
@@ -104,8 +102,7 @@
             transform-origin: 100% 100%;
                   }
             }
-    
-      /*Animation bouton menu*/
+          /*Animation bouton menu*/
 .card__menu{
     &:hover> .menu__choice--text{
         width:180px ;
@@ -123,22 +120,19 @@
  }
 .card__decoration--accueil{
         transform: scale(1);
-        transition: opacity 250ms, scale 50ms 150ms;
-   
-       
+        transition: scale 50ms 150ms;
+         
    &:hover {
+     background:lighten($color-secondary,22%);
     cursor: pointer;
     @include shadow-button-hover;
-    filter: brightness(120%);
-    transform: scale(1.1)}  
+     transform: scale(1.1)}  
     &:hover> i {
-        color: $color-primary;
+        color:$color-primary;
         }  
          }
-   
-      /*Keyframes*/
+         /*Keyframes*/
 /*Apparition pagesmenu*/
-
 @keyframes menu{
     0%{
         transform:translateY(+35px);
@@ -160,9 +154,7 @@
 {
     animation: menu $menu-dur $menu-third-delay  backwards;
  }
-
  /*loading spinner*/
-
 .loading
     {
         height: 100vh;
@@ -174,11 +166,9 @@
         position:fixed;
         z-index: 10;
       background-image:linear-gradient($color-tertiary,$color-primary);
-      animation: hideLoader 3500ms 1 forwards;
-      
-    }
- 
-    .loading::after
+      animation: hideLoader $hide-dur 1 forwards;
+       }
+     .loading::after
     {
       content : "";
       display: flex;
@@ -192,11 +182,9 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      animation: spin 1000ms linear infinite;
-   
-    }
- 
-    @keyframes hideLoader
+      animation: spin $menu-dur linear infinite;
+       }
+     @keyframes hideLoader
     {
       100%
       {
@@ -204,8 +192,7 @@
         visibility: hidden;
       }
     }
- 
-    @keyframes spin
+     @keyframes spin
     {
       100%
       {

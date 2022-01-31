@@ -1,4 +1,4 @@
-/* coulueurs*/
+/* couleurs*/
 $color-primary:hsl(267, 66%, 60%) ;
   $color-secondary:hsl(317, 100%, 74%) ;
   $color-tertiary:hsl(165, 56%, 74%);
@@ -6,7 +6,8 @@ $color-primary:hsl(267, 66%, 60%) ;
   $color-text:#000000;
   $color-nav:#F2F2F2;
 /*delay keyframes menu*/
-  $menu-dur:1000ms;
+$hide-dur:3500ms;
+$menu-dur:1000ms;
 $menu-first-delay:50ms;
 $menu-second-delay:500ms;
 $menu-third-delay:1000ms;

@@ -24,8 +24,8 @@
     "to-regex-range": "^5.0.1"
   },
   "scripts": {
-    "sass": "sass --watch sass/accueil.scss:css/accueil.css",
-    "prefix":"postcss css/accueil.css --use autoprefixer -d css/prefixed/"
+    "sass": "sass --watch sass/main.scss:css/main.css",
+    "prefix":"postcss css/main.css --use autoprefixer -d css/prefixed/"
   },
   "repository": {
     "type": "git",

@@ -162,9 +162,9 @@ position: relative;
     @include shadow-button;
     transition: box-shadow 250ms, scale 50ms 200ms;
    
-   &:focus {
+   &:hover {
     cursor: pointer;
-    @include shadow-button-focus;
+    @include shadow-button-hover;
         
     }  
        

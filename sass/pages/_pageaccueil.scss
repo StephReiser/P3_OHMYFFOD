@@ -128,9 +128,9 @@ nav{
   background-color: white;  
   border-radius: 15px 15px 15px 15px;
   @include shadow-button;
-  &:hover {
+  &:focus {
     cursor: pointer;
-    @include shadow-button-hover;
+    @include shadow-button-focus;
     }
 
     @media (min-width: 992px) {

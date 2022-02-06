@@ -1,19 +1,13 @@
 @charset "UTF-8";
-/* couleurs*/
-/*delay keyframes menu*/
-/*mixin*/
-/*map*/
-/*placeholders*/
+
 .check__animation, .card__menu, .cardgost, .step, nav .nav__card {
   display: flex;
   align-items: center;
 }
-
 .restaucontainer__title, footer .footer__handshelpip, footer .footer__restaurantip, header .menu--header {
   display: flex;
   align-items: baseline;
 }
-
 .menu__choice, nav {
   display: grid;
   height: auto;
@@ -22,8 +16,6 @@
   align-items: flex-end;
   justify-items: center;
 }
-
-/*Condition */
 /*boutons*/
 .btnstyle {
   opacity: 1;
@@ -36,16 +28,14 @@
   opacity: 0.8;
   box-shadow: 10px 10px 20px #343638;
 }
-
 /*Disparition icone coeur page accueil*/
 .heartcontainer i {
   opacity: 1;
   transition: opacity 50ms;
 }
-.heartcontainer i:hover {
+.heartcontainer i:active {
   opacity: 0;
 }
-
 /*Apparition coeur coloré page accueil*/
 .heart__accueil {
   position: absolute;
@@ -55,7 +45,7 @@
   right: 45px;
   transition: opacity 1000ms;
 }
-.heart__accueil:hover {
+.heart__accueil:active {
   opacity: 1;
 }
 .heart__accueil::before {
@@ -79,7 +69,6 @@
   transform: rotate(45deg);
   transform-origin: 100% 100%;
 }
-
 /*Disparition icone coeur page menu*/
 .bigheartcontainer {
   width: 10px;
@@ -92,10 +81,9 @@
   opacity: 1;
   transition: opacity 50ms;
 }
-.bigheartcontainer i:hover {
+.bigheartcontainer i:active {
   opacity: 0;
 }
-
 /*Apparition coeur coloré page menu*/
 .heart__menu {
   position: absolute;
@@ -105,7 +93,7 @@
   transition: opacity 1000ms;
   left: 345px;
 }
-.heart__menu:hover {
+.heart__menu:active {
   cursor: pointer;
   opacity: 1;
 }
@@ -130,7 +118,6 @@
   transform: rotate(45deg);
   transform-origin: 100% 100%;
 }
-
 /*Animation bouton menu*/
 .card__menu:hover > .menu__choice--text {
   width: 180px;
@@ -144,7 +131,6 @@
 .card__menu:hover > .check > .check__animation {
   transform: rotate(0deg);
 }
-
 .card__decoration--accueil {
   transform: scale(1);
   transition: scale 50ms 150ms;
@@ -158,8 +144,6 @@
 .card__decoration--accueil:hover > i {
   color: #9256dc;
 }
-
-/*Keyframes*/
 /*Apparition pagesmenu*/
 @keyframes menu {
   0% {
@@ -174,15 +158,12 @@
 .first {
   animation: menu 1000ms 50ms backwards;
 }
-
 .second {
   animation: menu 1000ms 500ms backwards;
 }
-
 .third {
   animation: menu 1000ms 1000ms backwards;
 }
-
 /*loading spinner*/
 .loading {
   height: 100vh;
@@ -196,7 +177,6 @@
   background-image: linear-gradient(#98e2cf, #9256dc);
   animation: hideLoader 3500ms 1 forwards;
 }
-
 .loading::after {
   content: "";
   display: flex;
@@ -212,7 +192,6 @@
   border-radius: 50%;
   animation: spin 1000ms linear infinite;
 }
-
 @keyframes hideLoader {
   100% {
     opacity: 0;
@@ -236,7 +215,6 @@
   position: relative;
   z-index: 1;
 }
-
 .btn {
   grid-row: 4;
   padding: 50px;
@@ -252,7 +230,6 @@
     grid-column: 2;
   }
 }
-
 /*Pastille nouveauté*/
 .new {
   color: green;
@@ -278,7 +255,6 @@
   padding-left: 10px;
   top: 20px;
 }
-
 /*Boutons coeur accueil*/
 .heartcontainer--accueil {
   width: 10px;
@@ -294,7 +270,6 @@
   z-index: 1;
   font-size: 30px;
 }
-
 /*Bouton coeur page menu*/
 .heartcontainer--menu {
   width: 10px;
@@ -309,16 +284,13 @@
   z-index: 1;
   font-size: 30px;
 }
-
 /*Principaux éléments*/
 * {
   box-sizing: border-box;
 }
-
 h1 {
   font-size: large;
 }
-
 body {
   display: grid;
   grid-template-columns: 1fr;
@@ -335,7 +307,6 @@ body a {
   color: black;
   cursor: pointer;
 }
-
 /*Entête commune et spécifique accueil/menu*/
 header {
   height: 100px;
@@ -360,7 +331,6 @@ header i {
   padding-right: 15px;
   color: black;
 }
-
 /*Footer*/
 footer {
   display: grid;
@@ -441,7 +411,6 @@ footer .contact {
     grid-column: 4;
   }
 }
-
 /*Présentation de l'entreprise page d'accueil*/
 .presentation {
   padding-bottom: 20px;
@@ -449,7 +418,6 @@ footer .contact {
   align-content: center;
   background-color: #f2f2f2c7;
 }
-
 .localisation {
   padding: 10px;
   width: 100%;
@@ -473,7 +441,6 @@ footer .contact {
 .localisation i {
   padding-left: 50px;
 }
-
 /*Cartes accueil et navigation en étapes*/
 @media (min-width: 1024px) {
   nav {
@@ -499,13 +466,11 @@ nav .nav__card h2 {
   font-size: medium;
   padding-right: 20px;
 }
-
 .card__decoration--accueil {
   background-color: #F2F2F2;
   box-shadow: 4px 4px 5px #ABB0B4;
   transition: box-shadow 250ms, scale 50ms 200ms;
 }
-
 .step {
   justify-content: center;
   background-color: #9256dc;
@@ -521,7 +486,6 @@ nav .nav__card h2 {
 .step p {
   color: white;
 }
-
 /*Section principale*/
 section {
   display: grid;
@@ -550,7 +514,6 @@ section h2 {
     padding-left: 90px;
   }
 }
-
 .img {
   width: 100%;
   height: 205px;
@@ -560,7 +523,6 @@ section h2 {
   position: relative;
   z-index: 3;
 }
-
 .article {
   display: flex;
   flex-direction: column;
@@ -639,7 +601,6 @@ section h2 {
     grid-row: 3;
   }
 }
-
 .article__restaucontainer {
   border-radius: 20px 20px 20px 20px;
   grid-row: 2;
@@ -662,7 +623,6 @@ section h2 {
 .article__restaucontainer h2 {
   text-align: left;
 }
-
 /*section propre aux menus*/
 main {
   height: auto;
@@ -688,7 +648,6 @@ main {
     grid-template-rows: 1fr;
   }
 }
-
 .restaucontainer {
   height: 300px;
   width: 100%;
@@ -704,7 +663,6 @@ main {
     border-top-right-radius: 35px;
   }
 }
-
 .restaucontainer__title {
   background-color: #F2F2F2;
   justify-content: space-between;
@@ -720,7 +678,6 @@ main {
   font-family: "Shrikhand", cursive;
   font-size: x-large;
 }
-
 /*Positionnement de l'image du menu*/
 .img__menu {
   width: 100%;
@@ -738,7 +695,6 @@ main {
     border-top-right-radius: 35px;
   }
 }
-
 /*Groupement de cartes menu*/
 .cardgost {
   width: 40px;
@@ -812,7 +768,6 @@ main {
   font-size: small;
   width: auto;
 }
-
 .card__menu {
   justify-content: space-between;
   width: 320px;
@@ -822,7 +777,6 @@ main {
   padding-right: 15px;
   position: relative;
 }
-
 .card__decoration--menu {
   background-color: white;
   box-shadow: 4px 4px 5px #ABB0B4;
@@ -832,7 +786,6 @@ main {
   cursor: pointer;
   box-shadow: 10px 10px 20px #343638;
 }
-
 .check {
   display: flex;
   background-color: #98e2cf;
@@ -851,7 +804,6 @@ main {
   transition: transform 400ms;
   transform-origin: right;
 }
-
 .check__animation {
   height: 20px;
   width: 20px;
@@ -868,5 +820,4 @@ main {
   color: #98e2cf;
   z-index: 4;
 }
-
 /*# sourceMappingURL=main.css.map */

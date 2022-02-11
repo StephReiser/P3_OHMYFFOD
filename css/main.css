@@ -103,7 +103,7 @@
   z-index: 3;
   top: 17px;
   transition: opacity 1000ms;
-  left: 330px;
+  right: 59npm run prefix px;
 }
 .heart__menu:active {
   cursor: pointer;
@@ -307,7 +307,7 @@
   position: relative;
   z-index: 1;
   font-size: 30px;
-  left: -50px;
+  right: 50px;
 }
 
 /*Principaux éléments*/
@@ -323,7 +323,7 @@ body {
   touch-action: pinch-zoom;
   display: grid;
   justify-content: center;
-  max-width: 120%;
+  max-width: 100%;
   grid-template-columns: 1fr;
   margin: auto;
   margin: auto;
@@ -670,7 +670,7 @@ section {
   grid-template-rows: 350px 350px 350px 100px;
   height: auto;
   margin-bottom: -5px;
-  max-width: 120%;
+  max-width: 100%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   section {
@@ -707,7 +707,7 @@ section {
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   position: absolute;
-  width: 390px;
+  width: 100%;
   padding-left: 35px;
   padding-right: 15px;
 }

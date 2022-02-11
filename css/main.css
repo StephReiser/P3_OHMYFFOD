@@ -103,7 +103,7 @@
   z-index: 3;
   top: 17px;
   transition: opacity 1000ms;
-  right: 59npm run prefix px;
+  right: 59px;
 }
 .heart__menu:active {
   cursor: pointer;

@@ -360,6 +360,8 @@ header i {
   font-size: x-large;
   padding-right: 15px;
   color: black;
+  grid-column: 1/1;
+  margin-left: -100px;
 }
 
 /*Footer*/
